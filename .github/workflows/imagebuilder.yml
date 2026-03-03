@@ -59,12 +59,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-ib-dl-
 
-      - name: Warmup (download packages)
+      - name: Warmup (prepare downloads via a no-op image build)
         if: inputs.mode == 'warmup'
         run: |
           cd ib
-          # Only warm up dl cache; do not build/sign package index
-          make download
+          # ImageBuilder Makefile does not always expose a standalone `download` target.
+          # Building an image will fetch required package archives into dl/, which we then cache.
+          make image PROFILE="generic" FILES="files" PACKAGES="\
+            luci \
+            luci-ssl \
+            luci-app-ddns \
+            luci-app-openvpn \
+            luci-app-openvpn-server \
+            luci-app-samba4 \
+            luci-app-tailscale \
+            tailscale \
+          "
 
       - name: Save cache (dl)
         if: always()
