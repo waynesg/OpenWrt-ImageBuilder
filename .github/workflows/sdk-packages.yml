@@ -5,7 +5,7 @@ on:
 
 env:
   TZ: Asia/Shanghai
-  SDK_URL: ""  # TODO: set ImmortalWrt 24.10 x86_64 SDK tarball URL
+  SDK_URL: "https://downloads.immortalwrt.org/releases/24.10.0/targets/x86/64/immortalwrt-sdk-24.10.0-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst"
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget xz-utils tar gzip ca-certificates make rsync git python3 gawk
+          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk
 
       - name: Validate SDK_URL
         run: |
@@ -29,8 +29,8 @@ jobs:
       - name: Download SDK
         run: |
           mkdir -p sdk
-          wget -O /tmp/sdk.tar.xz "${SDK_URL}"
-          tar -xJf /tmp/sdk.tar.xz -C sdk --strip-components=1
+          wget -O /tmp/sdk.tar.zst "${SDK_URL}"
+          tar --use-compress-program=unzstd -xf /tmp/sdk.tar.zst -C sdk --strip-components=1
 
       - name: Update feeds
         run: |

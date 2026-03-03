@@ -12,7 +12,7 @@ on:
 
 env:
   TZ: Asia/Shanghai
-  IB_URL: ""  # TODO: set ImmortalWrt 24.10 x86_64 ImageBuilder tarball URL
+  IB_URL: "https://downloads.immortalwrt.org/releases/24.10.0/targets/x86/64/immortalwrt-imagebuilder-24.10.0-x86-64.Linux-x86_64.tar.zst"
   ARCH: x86_64
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget xz-utils tar gzip ca-certificates make rsync curl
+          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync curl
 
       - name: Validate IB_URL
         run: |
@@ -37,8 +37,8 @@ jobs:
       - name: Download ImageBuilder
         run: |
           mkdir -p ib
-          wget -O /tmp/ib.tar.xz "${IB_URL}"
-          tar -xJf /tmp/ib.tar.xz -C ib --strip-components=1
+          wget -O /tmp/ib.tar.zst "${IB_URL}"
+          tar --use-compress-program=unzstd -xf /tmp/ib.tar.zst -C ib --strip-components=1
 
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
