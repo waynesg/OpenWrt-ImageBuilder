@@ -1,0 +1,84 @@
+name: SDK packages feed (x86_64 24.10)
+
+on:
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+  SDK_URL: ""  # TODO: set ImmortalWrt 24.10 x86_64 SDK tarball URL
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget xz-utils tar gzip ca-certificates make rsync git python3 gawk
+
+      - name: Validate SDK_URL
+        run: |
+          if [ -z "${SDK_URL}" ]; then
+            echo "SDK_URL is empty. Set it in workflow env or repository variables." >&2
+            exit 1
+          fi
+
+      - name: Download SDK
+        run: |
+          mkdir -p sdk
+          wget -O /tmp/sdk.tar.xz "${SDK_URL}"
+          tar -xJf /tmp/sdk.tar.xz -C sdk --strip-components=1
+
+      - name: Update feeds
+        run: |
+          cd sdk
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+
+      - name: Add third-party package sources
+        run: |
+          cd sdk
+          mkdir -p package/waynesg
+          # Mirror the repos you currently use (from diy-repo-script.sh)
+          git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/waynesg/OpenClash
+          # install luci-app-openclash into feeds/luci path
+          rm -rf feeds/luci/applications/luci-app-openclash || true
+          mv package/waynesg/OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
+
+          git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 package/waynesg/luci-app-passwall2
+          git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/waynesg/luci-app-mosdns
+          git clone --depth=1 https://github.com/kiddin9/openwrt-subconverter package/waynesg/luci-app-subconverter
+          git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/waynesg/luci-app-tailscale
+
+          # autoupdate v2 (your repo)
+          git clone --depth=1 -b 2.0 https://github.com/waynesg/luci-app-autoupdate package/waynesg/luci-app-autoupdate
+
+      - name: Select packages and build
+        run: |
+          cd sdk
+          # NOTE: you may need to select/enable packages via make menuconfig or .config generation.
+          # For CI: directly build the ipk targets.
+          make defconfig
+
+          # build a small starter set; expand as needed
+          make package/feeds/luci/luci-app-openclash/compile V=s
+          make package/waynesg/luci-app-passwall2/compile V=s
+          make package/waynesg/luci-app-mosdns/compile V=s
+          make package/waynesg/luci-app-subconverter/compile V=s
+          make package/waynesg/luci-app-tailscale/compile V=s
+          make package/waynesg/luci-app-autoupdate/compile V=s
+
+      - name: Collect feed
+        run: |
+          mkdir -p packages-feed
+          # copy all built ipks
+          find sdk/bin/packages -name '*.ipk' -print -exec cp -n {} packages-feed/ \;
+
+      - name: Upload ipk feed artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipk-feed
+          path: packages-feed/

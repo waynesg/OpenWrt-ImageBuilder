@@ -1,0 +1,98 @@
+name: ImageBuilder (x86_64 24.10)
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'warmup: only download packages and save dl cache; build: make image'
+        required: true
+        default: 'build'
+        type: choice
+        options: [build, warmup]
+
+env:
+  TZ: Asia/Shanghai
+  IB_URL: ""  # TODO: set ImmortalWrt 24.10 x86_64 ImageBuilder tarball URL
+  ARCH: x86_64
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget xz-utils tar gzip ca-certificates make rsync curl
+
+      - name: Validate IB_URL
+        run: |
+          if [ -z "${IB_URL}" ]; then
+            echo "IB_URL is empty. Set it in workflow env or repository variables." >&2
+            exit 1
+          fi
+
+      - name: Download ImageBuilder
+        run: |
+          mkdir -p ib
+          wget -O /tmp/ib.tar.xz "${IB_URL}"
+          tar -xJf /tmp/ib.tar.xz -C ib --strip-components=1
+
+      - name: Prepare FILES (defaults + openclash core/ui)
+        run: |
+          # Start from repo provided files
+          rm -rf ib/files
+          mkdir -p ib/files
+          rsync -a image/files/ ib/files/
+
+          # Inject OpenClash core/UI assets (optional)
+          chmod +x scripts/preset-clash-core.sh
+          scripts/preset-clash-core.sh amd64 ib/files
+
+      - name: Restore cache (dl)
+        uses: actions/cache/restore@v4
+        with:
+          path: ib/dl
+          key: ${{ runner.os }}-ib-dl-${{ hashFiles('image/files/**', '.github/workflows/imagebuilder.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-ib-dl-
+
+      - name: Warmup (download packages)
+        if: inputs.mode == 'warmup'
+        run: |
+          cd ib
+          # adjust PACKAGES list to your needs
+          make package_index
+          make download
+
+      - name: Save cache (dl)
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ib/dl
+          key: ${{ runner.os }}-ib-dl-${{ hashFiles('image/files/**', '.github/workflows/imagebuilder.yml') }}
+
+      - name: Build image
+        if: inputs.mode == 'build'
+        run: |
+          cd ib
+          # TODO: set PROFILE and PACKAGES list
+          make image PROFILE="generic" FILES="files" PACKAGES="\
+            luci \
+            luci-ssl \
+            luci-app-ddns \
+            luci-app-openvpn \
+            luci-app-openvpn-server \
+            luci-app-samba4 \
+            luci-app-tailscale \
+            tailscale \
+          "
+
+      - name: Upload images
+        if: inputs.mode == 'build'
+        uses: actions/upload-artifact@v4
+        with:
+          name: imagebuilder-output
+          path: ib/bin/targets/**

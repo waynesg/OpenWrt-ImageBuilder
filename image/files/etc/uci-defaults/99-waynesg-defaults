@@ -1,0 +1,13 @@
+#!/bin/sh
+# Runs once on first boot.
+
+# LuCI diag endpoints
+uci set luci.diag.ping='www.baidu.com'
+uci set luci.diag.route='www.baidu.com'
+uci set luci.diag.dns='www.baidu.com'
+uci commit luci
+
+# Optional: set release strings (keep it simple; override if you want)
+# (Better is to ship /etc/openwrt_release directly.)
+
+exit 0
