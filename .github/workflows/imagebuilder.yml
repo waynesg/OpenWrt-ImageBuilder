@@ -63,8 +63,7 @@ jobs:
         if: inputs.mode == 'warmup'
         run: |
           cd ib
-          # adjust PACKAGES list to your needs
-          make package_index
+          # Only warm up dl cache; do not build/sign package index
           make download
 
       - name: Save cache (dl)
