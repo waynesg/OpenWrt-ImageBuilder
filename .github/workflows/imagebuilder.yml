@@ -59,17 +59,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-ib-dl-
 
-      - name: "Debug: list available luci-ssl/libustream packages"
+      - name: "Debug: repos + opkg-lists (after make image)"
+        if: always()
         run: |
           cd ib
-          echo "== Packages.gz files =="
-          ls -la packages/*/Packages.gz 2>/dev/null || true
+          echo "== repositories.conf =="
+          sed -n '1,200p' repositories.conf || true
 
-          echo "== luci-ssl candidates =="
-          zcat packages/*/Packages.gz | grep -nE '^Package: luci-ssl' || true
+          echo "== opkg-lists files =="
+          find build_dir -path '*tmp/opkg-lists*' -maxdepth 6 -type f -print 2>/dev/null || true
 
-          echo "== libustream candidates =="
-          zcat packages/*/Packages.gz | grep -nE '^Package: libustream' || true
+          echo "== luci-ssl candidates (from opkg-lists) =="
+          grep -RIn '^Package: luci-ssl' build_dir/*/root-*/tmp/opkg-lists 2>/dev/null || true
+
+          echo "== libustream candidates (from opkg-lists) =="
+          grep -RIn '^Package: libustream' build_dir/*/root-*/tmp/opkg-lists 2>/dev/null || true
 
       - name: Warmup (prepare downloads via a no-op image build)
         if: inputs.mode == 'warmup'
@@ -77,16 +81,9 @@ jobs:
           cd ib
           # ImageBuilder Makefile does not always expose a standalone `download` target.
           # Building an image will fetch required package archives into dl/, which we then cache.
-          # Use mbedTLS LuCI SSL variant to avoid libustream openssl/mbedtls file clashes.
+          # Warmup: keep package set minimal to avoid SSL/libustream clashes.
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
-            luci-ssl-mbedtls \
-            -libustream-openssl \
-            -libustream-openssl20201210 \
-            luci-app-ddns \
-            luci-app-openvpn \
-            luci-app-openvpn-server \
-            luci-app-samba4 \
             luci-app-tailscale \
             tailscale \
           "
@@ -102,15 +99,9 @@ jobs:
         if: inputs.mode == 'build'
         run: |
           cd ib
+          # Build: start minimal; once stable, add packages incrementally.
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
-            luci-ssl-mbedtls \
-            -libustream-openssl \
-            -libustream-openssl20201210 \
-            luci-app-ddns \
-            luci-app-openvpn \
-            luci-app-openvpn-server \
-            luci-app-samba4 \
             luci-app-tailscale \
             tailscale \
           "
