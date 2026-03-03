@@ -41,36 +41,22 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Add third-party package sources
+      - name: Add third-party package sources (minimal)
         run: |
           cd sdk
           mkdir -p package/waynesg
-          # Mirror the repos you currently use (from diy-repo-script.sh)
-          git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/waynesg/OpenClash
-          # install luci-app-openclash into feeds/luci path
-          rm -rf feeds/luci/applications/luci-app-openclash || true
-          mv package/waynesg/OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 
-          git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 package/waynesg/luci-app-passwall2
-          git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/waynesg/luci-app-mosdns
-          git clone --depth=1 https://github.com/kiddin9/openwrt-subconverter package/waynesg/luci-app-subconverter
+          # tailscale LuCI app
           git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/waynesg/luci-app-tailscale
 
-          # autoupdate v2 (your repo)
+          # autoupdate v2
           git clone --depth=1 -b 2.0 https://github.com/waynesg/luci-app-autoupdate package/waynesg/luci-app-autoupdate
 
-      - name: Select packages and build
+      - name: Select packages and build (minimal)
         run: |
           cd sdk
-          # NOTE: you may need to select/enable packages via make menuconfig or .config generation.
-          # For CI: directly build the ipk targets.
           make defconfig
 
-          # build a small starter set; expand as needed
-          make package/feeds/luci/luci-app-openclash/compile V=s
-          make package/waynesg/luci-app-passwall2/compile V=s
-          make package/waynesg/luci-app-mosdns/compile V=s
-          make package/waynesg/luci-app-subconverter/compile V=s
           make package/waynesg/luci-app-tailscale/compile V=s
           make package/waynesg/luci-app-autoupdate/compile V=s
 
