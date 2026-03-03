@@ -3,6 +3,9 @@ name: SDK packages feed (x86_64 24.10)
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 env:
   TZ: Asia/Shanghai
   SDK_URL: "https://downloads.immortalwrt.org/releases/24.10.0/targets/x86/64/immortalwrt-sdk-24.10.0-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst"
@@ -77,8 +80,26 @@ jobs:
           # copy all built ipks
           find sdk/bin/packages -name '*.ipk' -print -exec cp -n {} packages-feed/ \;
 
+      - name: Build opkg index (Packages.gz)
+        run: |
+          set -e
+          mkdir -p public/feed
+          cp -n packages-feed/*.ipk public/feed/ || true
+          # generate Packages + Packages.gz using SDK helper
+          (cd sdk && ./scripts/ipkg-make-index.sh "$GITHUB_WORKSPACE/public/feed" > "$GITHUB_WORKSPACE/public/feed/Packages")
+          gzip -9nc public/feed/Packages > public/feed/Packages.gz
+          echo "Feed files:" && ls -la public/feed | sed -n '1,200p'
+
       - name: Upload ipk feed artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ipk-feed
-          path: packages-feed/
+          path: public/feed/
+
+      - name: Publish feed to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: public
+          force_orphan: true

@@ -40,6 +40,12 @@ jobs:
           wget -O /tmp/ib.tar.zst "${IB_URL}"
           tar --use-compress-program=unzstd -xf /tmp/ib.tar.zst -C ib --strip-components=1
 
+      - name: Add waynesg feed (gh-pages)
+        run: |
+          cd ib
+          echo "src/gz waynesg https://waynesg.github.io/OpenWrt-ImageBuilder/feed" >> repositories.conf
+          echo "== repositories.conf (tail) ==" && tail -n 5 repositories.conf
+
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
           # Start from repo provided files
@@ -85,10 +91,7 @@ jobs:
         if: inputs.mode == 'warmup'
         run: |
           cd ib
-          # ImageBuilder Makefile does not always expose a standalone `download` target.
-          # Building an image will fetch required package archives into dl/, which we then cache.
-          # Warmup: keep package set minimal to avoid SSL/libustream clashes.
-          # NOTE: luci-app-tailscale is not present in official ImmortalWrt luci feed; add via SDK feed later.
+          # Warmup: keep package set minimal.
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
             tailscale \
@@ -105,11 +108,12 @@ jobs:
         if: inputs.mode == 'build'
         run: |
           cd ib
-          # Build: start minimal; once stable, add packages incrementally.
-          # NOTE: luci-app-tailscale is not present in official ImmortalWrt luci feed; add via SDK feed later.
+          # Build: include third-party LuCI apps from your gh-pages feed.
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
             tailscale \
+            luci-app-tailscale \
+            luci-app-autoupdate \
           " V=s
 
       - name: Upload images
