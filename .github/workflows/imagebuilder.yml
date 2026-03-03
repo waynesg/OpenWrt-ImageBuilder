@@ -65,9 +65,12 @@ jobs:
           cd ib
           # ImageBuilder Makefile does not always expose a standalone `download` target.
           # Building an image will fetch required package archives into dl/, which we then cache.
+          # Use mbedTLS LuCI SSL variant to avoid libustream openssl/mbedtls file clashes.
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
-            luci-ssl \
+            luci-ssl-mbedtls \
+            -libustream-openssl \
+            -libustream-openssl20201210 \
             luci-app-ddns \
             luci-app-openvpn \
             luci-app-openvpn-server \
@@ -89,7 +92,9 @@ jobs:
           cd ib
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
-            luci-ssl \
+            luci-ssl-mbedtls \
+            -libustream-openssl \
+            -libustream-openssl20201210 \
             luci-app-ddns \
             luci-app-openvpn \
             luci-app-openvpn-server \
