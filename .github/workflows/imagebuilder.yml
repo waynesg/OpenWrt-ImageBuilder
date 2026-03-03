@@ -59,7 +59,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-ib-dl-
 
-      - name: Debug: list available luci-ssl/libustream packages
+      - name: "Debug: list available luci-ssl/libustream packages"
         run: |
           cd ib
           echo "== Packages.gz files =="
