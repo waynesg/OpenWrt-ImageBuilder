@@ -20,7 +20,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk
+          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk coreutils
 
       - name: Validate SDK_URL
         run: |
@@ -71,6 +71,17 @@ jobs:
           set -e
           mkdir -p public/feed
           cp -n packages-feed/*.ipk public/feed/ || true
+
+          # Some ipkg-make-index.sh variants call `sha256` instead of `sha256sum`.
+          # Provide a wrapper if missing.
+          if ! command -v sha256 >/dev/null 2>&1; then
+            cat > /usr/local/bin/sha256 <<'SH'
+#!/bin/sh
+exec sha256sum "$@"
+SH
+            chmod +x /usr/local/bin/sha256
+          fi
+
           # generate Packages + Packages.gz using SDK helper
           (cd sdk && ./scripts/ipkg-make-index.sh "$GITHUB_WORKSPACE/public/feed" > "$GITHUB_WORKSPACE/public/feed/Packages")
           gzip -9nc public/feed/Packages > public/feed/Packages.gz
