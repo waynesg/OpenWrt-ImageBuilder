@@ -75,6 +75,7 @@ jobs:
           # Some ipkg-make-index.sh variants call `sha256` instead of `sha256sum`.
           # Provide a wrapper if missing.
           if ! command -v sha256 >/dev/null 2>&1; then
+            # Avoid heredocs (can be fragile inside YAML). Create a simple wrapper.
             printf '%s\n' '#!/bin/sh' 'exec sha256sum "$@"' | sudo tee /usr/local/bin/sha256 >/dev/null
             sudo chmod +x /usr/local/bin/sha256
           fi
