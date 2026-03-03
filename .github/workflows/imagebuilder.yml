@@ -59,6 +59,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-ib-dl-
 
+      - name: Debug: list available luci-ssl/libustream packages
+        run: |
+          cd ib
+          echo "== Packages.gz files =="
+          ls -la packages/*/Packages.gz 2>/dev/null || true
+
+          echo "== luci-ssl candidates =="
+          zcat packages/*/Packages.gz | grep -nE '^Package: luci-ssl' || true
+
+          echo "== libustream candidates =="
+          zcat packages/*/Packages.gz | grep -nE '^Package: libustream' || true
+
       - name: Warmup (prepare downloads via a no-op image build)
         if: inputs.mode == 'warmup'
         run: |
