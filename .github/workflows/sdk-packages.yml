@@ -75,13 +75,8 @@ jobs:
           # Some ipkg-make-index.sh variants call `sha256` instead of `sha256sum`.
           # Provide a wrapper if missing.
           if ! command -v sha256 >/dev/null 2>&1; then
-            cat > /usr/local/bin/sha256 <<'SH'
-            #!/bin/sh
-            exec sha256sum "$@"
-            SH
-            # de-indent the file contents
-            sed -i 's/^            //' /usr/local/bin/sha256
-            chmod +x /usr/local/bin/sha256
+            printf '%s\n' '#!/bin/sh' 'exec sha256sum "$@"' | sudo tee /usr/local/bin/sha256 >/dev/null
+            sudo chmod +x /usr/local/bin/sha256
           fi
 
           # generate Packages + Packages.gz using SDK helper
