@@ -43,7 +43,7 @@ jobs:
       - name: Add waynesg feed (gh-pages)
         run: |
           cd ib
-          echo "src/gz waynesg https://waynesg.github.io/OpenWrt-ImageBuilder/feed" >> repositories.conf
+          echo "src/gz waynesg https://waynesg.github.io/OpenWrt-ImageBuilder/feed/" >> repositories.conf
           echo "== repositories.conf (tail) ==" && tail -n 5 repositories.conf
 
       - name: Prepare FILES (defaults + openclash core/ui)
