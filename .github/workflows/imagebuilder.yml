@@ -65,21 +65,33 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-ib-dl-
 
+      - name: Sanity check waynesg feed (Pages)
+        if: always()
+        run: |
+          set -e
+          echo "== HEAD Packages.gz =="
+          curl -fsSI "https://waynesg.github.io/OpenWrt-ImageBuilder/feed/Packages.gz" | sed -n '1,120p'
+          echo "== download Packages.gz (first bytes) =="
+          curl -fsSL "https://waynesg.github.io/OpenWrt-ImageBuilder/feed/Packages.gz" | head -c 64 | xxd
+
       - name: "Debug: repos + opkg-lists (after make image)"
         if: always()
         run: |
           cd ib
           echo "== repositories.conf =="
-          sed -n '1,240p' repositories.conf || true
+          sed -n '1,260p' repositories.conf || true
 
-          echo "== opkg-lists files =="
-          find build_dir -path '*tmp/opkg-lists*' -maxdepth 6 -type f -print 2>/dev/null || true
+          echo "== opkg-lists files (all) =="
+          find build_dir -type f -path '*/tmp/opkg-lists/*' -print 2>/dev/null | head -n 200 || true
 
           echo "== luci candidates (from opkg-lists) =="
           grep -RIn '^Package: luci' build_dir/*/root-*/tmp/opkg-lists 2>/dev/null | head -n 80 || true
 
           echo "== tailscale candidates (from opkg-lists) =="
           grep -RIn '^Package: tailscale' build_dir/*/root-*/tmp/opkg-lists 2>/dev/null || true
+
+          echo "== autoupdate candidates (from opkg-lists) =="
+          grep -RIn '^Package: luci-app-autoupdate' build_dir/*/root-*/tmp/opkg-lists 2>/dev/null || true
 
           echo "== luci-ssl candidates (from opkg-lists) =="
           grep -RIn '^Package: luci-ssl' build_dir/*/root-*/tmp/opkg-lists 2>/dev/null || true
