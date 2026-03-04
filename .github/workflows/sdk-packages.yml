@@ -20,7 +20,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk coreutils
+          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk coreutils opkg-utils
 
       - name: Validate SDK_URL
         run: |
@@ -80,8 +80,8 @@ jobs:
             sudo chmod +x /usr/local/bin/sha256
           fi
 
-          # generate Packages + Packages.gz using SDK helper
-          (cd sdk && ./scripts/ipkg-make-index.sh "$GITHUB_WORKSPACE/public/feed" > "$GITHUB_WORKSPACE/public/feed/Packages")
+          # generate Packages + Packages.gz (use opkg-utils; more robust than SDK ipkg-make-index)
+          opkg-make-index public/feed > public/feed/Packages
           gzip -9nc public/feed/Packages > public/feed/Packages.gz
           echo "Feed files:" && ls -la public/feed | sed -n '1,200p'
 
