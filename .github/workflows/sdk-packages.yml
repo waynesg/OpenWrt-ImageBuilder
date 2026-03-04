@@ -20,7 +20,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk coreutils opkg-utils
+          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync git python3 gawk coreutils
 
       - name: Validate SDK_URL
         run: |
@@ -80,8 +80,15 @@ jobs:
             sudo chmod +x /usr/local/bin/sha256
           fi
 
-          # generate Packages + Packages.gz (use opkg-utils; more robust than SDK ipkg-make-index)
-          opkg-make-index public/feed > public/feed/Packages
+          # generate Packages + Packages.gz
+          # Avoid SDK scripts/ipkg-make-index.sh (can fail with sed/tar issues on some ipks)
+          # and avoid distro packages (opkg-utils not available on all ubuntu runners).
+          # Use upstream opkg-utils script directly.
+          rm -rf /tmp/opkg-utils
+          git clone --depth=1 https://git.yoctoproject.org/opkg-utils /tmp/opkg-utils
+          echo "== opkg-utils ==" && ls -la /tmp/opkg-utils | sed -n '1,200p'
+
+          /tmp/opkg-utils/opkg-make-index public/feed > public/feed/Packages
           gzip -9nc public/feed/Packages > public/feed/Packages.gz
           echo "Feed files:" && ls -la public/feed | sed -n '1,200p'
 
