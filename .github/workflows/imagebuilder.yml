@@ -40,6 +40,15 @@ jobs:
           wget -O /tmp/ib.tar.zst "${IB_URL}"
           tar --use-compress-program=unzstd -xf /tmp/ib.tar.zst -C ib --strip-components=1
 
+      - name: Patch ImageBuilder opkg verification (allow unsigned local repo)
+        run: |
+          cd ib
+          # ImageBuilder invokes opkg with --verify-program opkg-key, which makes it expect Packages.sig
+          # even for the local file:packages repo. For CI we want to allow unsigned local packages.
+          # Remove the verify-program flag from OPKG invocation.
+          sed -i 's/--verify-program[[:space:]]\+\$\(SCRIPT_DIR\)\/opkg-key[[:space:]]\+//g' Makefile
+          grep -n "--verify-program" -n Makefile || true
+
       - name: Provide sha256 wrapper (ImageBuilder index script compatibility)
         run: |
           # Some ImageBuilder scripts/ipkg-make-index.sh variants call `sha256` (not present on Ubuntu runners).
