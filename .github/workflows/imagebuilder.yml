@@ -78,11 +78,30 @@ jobs:
           # Download index and extract the exact ipk filenames.
           curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
 
-          tailscale_ipk=$(awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-tailscale$/m {for(i=1;i<=NF;i++) if($i ~ /^Filename:/){print $i" "$(i+1)}}' /tmp/waynesg.Packages | awk '{print $2}' | head -n1)
-          autoupdate_ipk=$(awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-autoupdate$/m {for(i=1;i<=NF;i++) if($i ~ /^Filename:/){print $i" "$(i+1)}}' /tmp/waynesg.Packages | awk '{print $2}' | head -n1)
+          # Extract Filename: field for each package stanza. Use a robust parser (stanza-based, line-oriented).
+          tailscale_ipk=$(awk '
+            BEGIN{RS=""}
+            $0 ~ /^Package: luci-app-tailscale$/m {
+              n=split($0, lines, "\n");
+              for(i=1;i<=n;i++) if(lines[i] ~ /^Filename: /){sub(/^Filename: /,"",lines[i]); print lines[i]; exit}
+            }
+          ' /tmp/waynesg.Packages)
+
+          autoupdate_ipk=$(awk '
+            BEGIN{RS=""}
+            $0 ~ /^Package: luci-app-autoupdate$/m {
+              n=split($0, lines, "\n");
+              for(i=1;i<=n;i++) if(lines[i] ~ /^Filename: /){sub(/^Filename: /,"",lines[i]); print lines[i]; exit}
+            }
+          ' /tmp/waynesg.Packages)
 
           echo "luci-app-tailscale ipk: $tailscale_ipk"
           echo "luci-app-autoupdate ipk: $autoupdate_ipk"
+
+          echo "== sanity: show matched stanzas (top) =="
+          awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-tailscale$/m {print; exit}' /tmp/waynesg.Packages | sed -n '1,60p'
+          echo "---"
+          awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-autoupdate$/m {print; exit}' /tmp/waynesg.Packages | sed -n '1,60p'
 
           test -n "$tailscale_ipk"
           test -n "$autoupdate_ipk"
