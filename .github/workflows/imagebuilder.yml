@@ -56,6 +56,11 @@ jobs:
           cd ib
           FEED_BASE="https://waynesg.github.io/OpenWrt-ImageBuilder/feed"
 
+          # Ensure opkg signature checking is OFF in config so it won't require Packages.sig
+          # for the local file:packages repo.
+          sed -i '/^option[[:space:]]\+check_signature/d' repositories.conf
+          echo "option check_signature 0" >> repositories.conf
+
           # Download index and extract the exact ipk filenames.
           curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
 
@@ -74,6 +79,9 @@ jobs:
 
           echo "== local packages dir =="
           ls -la packages | sed -n '1,120p'
+
+          echo "== generate local Packages index =="
+          make package_index V=s CONFIG_SIGNATURE_CHECK= -j1
 
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
