@@ -97,7 +97,7 @@ jobs:
           echo "== download Packages.gz (first bytes) =="
           curl -fsSL "https://waynesg.github.io/OpenWrt-ImageBuilder/feed/Packages.gz" | head -c 64 | xxd
 
-      - name: Preflight: does ImageBuilder opkg see the 3rd-party packages?
+      - name: "Preflight: does ImageBuilder opkg see the 3rd-party packages?"
         if: always()
         run: |
           cd ib
