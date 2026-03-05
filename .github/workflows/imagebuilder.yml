@@ -90,8 +90,20 @@ jobs:
           set -e
           echo "== HEAD Packages.gz =="
           curl -fsSI "https://waynesg.github.io/OpenWrt-ImageBuilder/feed/Packages.gz" | sed -n '1,120p'
+          echo "== verify packages exist in index =="
+          curl -fsSL "https://waynesg.github.io/OpenWrt-ImageBuilder/feed/Packages.gz" \
+            | gzip -dc \
+            | grep -nE '^Package: luci-app-(tailscale|autoupdate)$' || true
           echo "== download Packages.gz (first bytes) =="
           curl -fsSL "https://waynesg.github.io/OpenWrt-ImageBuilder/feed/Packages.gz" | head -c 64 | xxd
+
+      - name: Preflight: does ImageBuilder opkg see the 3rd-party packages?
+        if: always()
+        run: |
+          cd ib
+          # This runs opkg update + list using the ImageBuilder's repositories.conf.
+          # If luci-app-* doesn't show up here, make image will never be able to install it.
+          make package_list V=s CONFIG_SIGNATURE_CHECK= -j1 | grep -E '^luci-app-(tailscale|autoupdate) ' || true
 
       - name: "Debug: repos + opkg-lists (after make image)"
         if: always()
