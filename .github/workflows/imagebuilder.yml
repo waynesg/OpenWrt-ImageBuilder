@@ -131,7 +131,7 @@ jobs:
           path: ib/dl
           key: ${{ runner.os }}-ib-dl-${{ hashFiles('image/files/**', '.github/workflows/imagebuilder.yml') }}
 
-      - name: Debug: un-silence package_index and print failure cause
+      - name: "Debug: un-silence package_index and print failure cause"
         if: always()
         run: |
           cd ib
