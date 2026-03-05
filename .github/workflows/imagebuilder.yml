@@ -78,30 +78,19 @@ jobs:
           # Download index and extract the exact ipk filenames.
           curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
 
-          # Extract Filename: field for each package stanza. Use a robust parser (stanza-based, line-oriented).
-          tailscale_ipk=$(awk '
-            BEGIN{RS=""}
-            $0 ~ /^Package: luci-app-tailscale$/m {
-              n=split($0, lines, "\n");
-              for(i=1;i<=n;i++) if(lines[i] ~ /^Filename: /){sub(/^Filename: /,"",lines[i]); print lines[i]; exit}
-            }
-          ' /tmp/waynesg.Packages)
-
-          autoupdate_ipk=$(awk '
-            BEGIN{RS=""}
-            $0 ~ /^Package: luci-app-autoupdate$/m {
-              n=split($0, lines, "\n");
-              for(i=1;i<=n;i++) if(lines[i] ~ /^Filename: /){sub(/^Filename: /,"",lines[i]); print lines[i]; exit}
-            }
-          ' /tmp/waynesg.Packages)
+          # Extract Filename: fields using a pure-regex parser (keep it one-line to avoid YAML quoting issues).
+          mapfile -t ipks < <(python3 -c 'import re,pathlib; c=pathlib.Path("/tmp/waynesg.Packages").read_text(encoding="utf-8",errors="replace"); mt=re.search(r"(?ms)^Package:\\s*luci-app-tailscale\\s*$.*?^Filename:\\s*(\\S+)\\s*$", c); ma=re.search(r"(?ms)^Package:\\s*luci-app-autoupdate\\s*$.*?^Filename:\\s*(\\S+)\\s*$", c); print(mt.group(1)); print(ma.group(1))')
+          tailscale_ipk="${ipks[0]}"
+          autoupdate_ipk="${ipks[1]}"
 
           echo "luci-app-tailscale ipk: $tailscale_ipk"
           echo "luci-app-autoupdate ipk: $autoupdate_ipk"
 
-          echo "== sanity: show matched stanzas (top) =="
-          awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-tailscale$/m {print; exit}' /tmp/waynesg.Packages | sed -n '1,60p'
-          echo "---"
-          awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-autoupdate$/m {print; exit}' /tmp/waynesg.Packages | sed -n '1,60p'
+          echo "== sanity: grep index for packages =="
+          grep -nE '^Package: luci-app-(tailscale|autoupdate)$' /tmp/waynesg.Packages || true
+          echo "== sanity: show Filename lines near matches =="
+          awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-tailscale$/m {print; exit}' /tmp/waynesg.Packages | grep -E '^Filename: ' || true
+          awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-autoupdate$/m {print; exit}' /tmp/waynesg.Packages | grep -E '^Filename: ' || true
 
           test -n "$tailscale_ipk"
           test -n "$autoupdate_ipk"
