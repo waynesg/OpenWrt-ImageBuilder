@@ -88,8 +88,14 @@ jobs:
           git clone --depth=1 https://git.yoctoproject.org/opkg-utils /tmp/opkg-utils
           echo "== opkg-utils ==" && ls -la /tmp/opkg-utils | sed -n '1,200p'
 
-          /tmp/opkg-utils/opkg-make-index public/feed > public/feed/Packages
+          # opkg-make-index can print noisy warnings like "Lost field ..." to stdout on some ipks.
+          # If those land in Packages, opkg may fail to parse the index and ImageBuilder will report
+          # "Unknown package ..." even though the ipk exists.
+          /tmp/opkg-utils/opkg-make-index public/feed 2> public/feed/index.log \
+            | grep -v '^Lost field ' \
+            > public/feed/Packages
           gzip -9nc public/feed/Packages > public/feed/Packages.gz
+          echo "== index warnings (if any) ==" && sed -n '1,120p' public/feed/index.log || true
           echo "Feed files:" && ls -la public/feed | sed -n '1,200p'
 
       - name: Upload ipk feed artifacts
