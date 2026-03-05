@@ -45,12 +45,14 @@ jobs:
           cd ib
           # ImageBuilder invokes opkg with --verify-program $(SCRIPT_DIR)/opkg-key, which makes it expect Packages.sig
           # even for the local file:packages repo. For CI we want to allow unsigned local packages.
-          # Remove the verify-program flag from OPKG invocation (match loosely; avoid fragile escaping).
-          sed -i -E 's#--verify-program[[:space:]]+[^[:space:]]*opkg-key[[:space:]]+##g' Makefile
+          # The OPKG definition spans multiple lines; simplest is to delete the whole line containing --verify-program.
+          sed -i '/--verify-program/d' Makefile
+
           echo "== verify-program occurrences (should be empty) =="
-          grep -n "--verify-program" Makefile || true
+          grep -n -- "--verify-program" Makefile || true
+
           echo "== OPKG definition (context) =="
-          grep -n "^OPKG" -n Makefile | head -n 5 || true
+          awk 'NR>=88 && NR<=110 {print NR ":" $0}' Makefile
 
       - name: Provide sha256 wrapper (ImageBuilder index script compatibility)
         run: |
