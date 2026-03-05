@@ -131,6 +131,20 @@ jobs:
           path: ib/dl
           key: ${{ runner.os }}-ib-dl-${{ hashFiles('image/files/**', '.github/workflows/imagebuilder.yml') }}
 
+      - name: Debug: un-silence package_index and print failure cause
+        if: always()
+        run: |
+          cd ib
+          echo "== Patch Makefile to show package_index output =="
+          # The ImageBuilder Makefile hides package_index output (>/dev/null 2>/dev/null), making CI failures opaque.
+          # Remove that redirection so we can see the real error in logs.
+          perl -0777 -i -pe 's/\)\s*>\/dev\/null\s*2>\/dev\/null/\)\n/g' Makefile
+          echo "== Show Makefile package_index section =="
+          awk 'NR>=165 && NR<=210 {print NR ":" $0}' Makefile
+
+          echo "== Try: make package_index (verbose) =="
+          make package_index V=s CONFIG_SIGNATURE_CHECK= -j1 || true
+
       - name: Build image
         if: inputs.mode == 'build'
         run: |
@@ -141,7 +155,7 @@ jobs:
             tailscale \
             luci-app-tailscale \
             luci-app-autoupdate \
-          " V=s CONFIG_SIGNATURE_CHECK=
+          " V=s CONFIG_SIGNATURE_CHECK= -j1
 
       - name: Upload images
         if: inputs.mode == 'build'
