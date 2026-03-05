@@ -25,7 +25,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync curl qemu-utils genisoimage
+          sudo apt-get install -y wget zstd tar gzip ca-certificates make rsync curl qemu-utils genisoimage unzip
 
       - name: Validate IB_URL
         run: |
