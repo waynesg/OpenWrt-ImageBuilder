@@ -70,10 +70,10 @@ jobs:
           cd ib
           FEED_BASE="https://waynesg.github.io/OpenWrt-ImageBuilder/feed"
 
-          # Ensure opkg signature checking is OFF in config so it won't require Packages.sig
-          # for the local file:packages repo.
+          # Disable opkg signature checking.
+          # In opkg config, `option check_signature` is a boolean: if the line exists, it's ON
+          # (a "0" value is still treated as present). So we must remove the option entirely.
           sed -i '/^option[[:space:]]\+check_signature/d' repositories.conf
-          echo "option check_signature 0" >> repositories.conf
 
           # Download index and extract the exact ipk filenames.
           curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
