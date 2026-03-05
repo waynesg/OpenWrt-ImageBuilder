@@ -50,20 +50,30 @@ jobs:
           fi
           sha256 --help >/dev/null 2>&1 || true
 
-      - name: Add waynesg feed (gh-pages)
+      - name: Fetch 3rd-party ipks into local ImageBuilder repo
         run: |
+          set -e
           cd ib
-          echo "src/gz waynesg https://waynesg.github.io/OpenWrt-ImageBuilder/feed/" >> repositories.conf
+          FEED_BASE="https://waynesg.github.io/OpenWrt-ImageBuilder/feed"
 
-          # Ensure signature checking is OFF in opkg config.
-          # ImageBuilder's default repositories.conf often ends with a bare:
-          #   option check_signature
-          # If we merely append another line, opkg will warn about a duplicate and keep it ON.
-          # So: delete any existing check_signature lines, then add exactly one "0".
-          sed -i '/^option[[:space:]]\+check_signature/d' repositories.conf
-          echo "option check_signature 0" >> repositories.conf
+          # Download index and extract the exact ipk filenames.
+          curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
 
-          echo "== repositories.conf (tail) ==" && tail -n 12 repositories.conf
+          tailscale_ipk=$(awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-tailscale$/m {for(i=1;i<=NF;i++) if($i ~ /^Filename:/){print $i" "$(i+1)}}' /tmp/waynesg.Packages | awk '{print $2}' | head -n1)
+          autoupdate_ipk=$(awk 'BEGIN{RS=""} $0 ~ /^Package: luci-app-autoupdate$/m {for(i=1;i<=NF;i++) if($i ~ /^Filename:/){print $i" "$(i+1)}}' /tmp/waynesg.Packages | awk '{print $2}' | head -n1)
+
+          echo "luci-app-tailscale ipk: $tailscale_ipk"
+          echo "luci-app-autoupdate ipk: $autoupdate_ipk"
+
+          test -n "$tailscale_ipk"
+          test -n "$autoupdate_ipk"
+
+          mkdir -p packages
+          curl -fL "$FEED_BASE/$tailscale_ipk" -o "packages/$tailscale_ipk"
+          curl -fL "$FEED_BASE/$autoupdate_ipk" -o "packages/$autoupdate_ipk"
+
+          echo "== local packages dir =="
+          ls -la packages | sed -n '1,120p'
 
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
@@ -101,8 +111,7 @@ jobs:
         if: always()
         run: |
           cd ib
-          # This runs opkg update + list using the ImageBuilder's repositories.conf.
-          # If luci-app-* doesn't show up here, make image will never be able to install it.
+          # package_list lists from all configured repos (including local file:packages).
           make package_list V=s CONFIG_SIGNATURE_CHECK= -j1 | grep -E '^luci-app-(tailscale|autoupdate) ' || true
 
       - name: "Debug: repos + opkg-lists (after make image)"
