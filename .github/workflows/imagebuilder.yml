@@ -112,7 +112,7 @@ jobs:
           make image PROFILE="generic" FILES="files" PACKAGES="\
             luci \
             tailscale \
-          " V=s
+          " V=s CONFIG_SIGNATURE_CHECK=
 
       - name: Save cache (dl)
         if: always()
@@ -131,7 +131,7 @@ jobs:
             tailscale \
             luci-app-tailscale \
             luci-app-autoupdate \
-          " V=s
+          " V=s CONFIG_SIGNATURE_CHECK=
 
       - name: Upload images
         if: inputs.mode == 'build'
