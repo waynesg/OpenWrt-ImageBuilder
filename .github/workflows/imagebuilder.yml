@@ -54,12 +54,16 @@ jobs:
         run: |
           cd ib
           echo "src/gz waynesg https://waynesg.github.io/OpenWrt-ImageBuilder/feed/" >> repositories.conf
-          # ImageBuilder opkg runs with signature checking enabled by default.
-          # Our GitHub Pages feed is unsigned (no Packages.sig), so opkg would skip it and later
-          # report "Unknown package ..." even though the package is present in Packages.gz.
-          # Disable signature checking for this build.
+
+          # Ensure signature checking is OFF in opkg config.
+          # ImageBuilder's default repositories.conf often ends with a bare:
+          #   option check_signature
+          # If we merely append another line, opkg will warn about a duplicate and keep it ON.
+          # So: delete any existing check_signature lines, then add exactly one "0".
+          sed -i '/^option[[:space:]]\+check_signature/d' repositories.conf
           echo "option check_signature 0" >> repositories.conf
-          echo "== repositories.conf (tail) ==" && tail -n 8 repositories.conf
+
+          echo "== repositories.conf (tail) ==" && tail -n 12 repositories.conf
 
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
