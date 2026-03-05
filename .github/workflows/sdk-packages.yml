@@ -79,11 +79,25 @@ jobs:
           file "$ipk" || true
           head -c 32 "$ipk" | xxd || true
 
+          # Some environments produce gzipped ipk blobs. Normalize for inspection.
+          work_ipk="$ipk"
+          if file "$ipk" | grep -q 'gzip compressed data'; then
+            work_ipk=/tmp/luci-app-tailscale.ipk
+            gunzip -c "$ipk" > "$work_ipk"
+            echo "Decompressed to $work_ipk"
+            file "$work_ipk" || true
+          fi
+
           echo "== ar table =="
-          if ! ar t "$ipk"; then
+          if ! ar t "$work_ipk"; then
             echo "ERROR: ipk is not a valid ar archive (unexpected format)" >&2
             exit 1
           fi
+
+          rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
+          cp "$work_ipk" /tmp/ipkcheck/pkg.ipk
+          cd /tmp/ipkcheck
+          ar x pkg.ipk
 
           rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
           cp "$ipk" /tmp/ipkcheck/pkg.ipk
@@ -109,6 +123,23 @@ jobs:
           mkdir -p packages-feed
           # copy all built ipks
           find sdk/bin/packages -name '*.ipk' -print -exec cp -n {} packages-feed/ \;
+
+      - name: Normalize ipk artifacts (some outputs may be gzipped)
+        run: |
+          set -e
+          shopt -s nullglob
+          for p in packages-feed/*.ipk; do
+            if file "$p" | grep -q 'gzip compressed data'; then
+              echo "Decompressing gzipped ipk: $p"
+              gunzip -c "$p" > "$p.tmp"
+              mv "$p.tmp" "$p"
+            fi
+          done
+          echo "== sample ipk formats =="
+          for p in packages-feed/*.ipk; do
+            file "$p" | sed -n '1,5p'
+            break
+          done
 
       - name: Build opkg index (Packages.gz)
         run: |
