@@ -78,10 +78,18 @@ jobs:
           # Download index and extract the exact ipk filenames.
           curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
 
-          # Extract Filename for each package by splitting stanzas (keep it a single YAML line).
-          mapfile -t ipks < <(python3 -c 'import re,pathlib; c=pathlib.Path("/tmp/waynesg.Packages").read_text(encoding="utf-8",errors="replace"); st=re.split(r"\\n\\n+", c.strip()+"\\n"); get=lambda pkg: next((re.search(r"^Filename:\\s*(\\S+)\\s*$", s, re.M).group(1) for s in st if re.search(r"^Package:\\s*%s\\s*$"%re.escape(pkg), s, re.M) and re.search(r"^Filename:\\s*(\\S+)\\s*$", s, re.M)), None); ft=get("luci-app-tailscale"); fa=get("luci-app-autoupdate"); assert ft and fa, (ft,fa); print(ft); print(fa)')
-          tailscale_ipk="${ipks[0]}"
-          autoupdate_ipk="${ipks[1]}"
+          # Extract Filename for each package stanza (line-range until blank). Avoid python/regex edge cases.
+          a_line=$(grep -n '^Package: luci-app-autoupdate$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1 || true)
+          t_line=$(grep -n '^Package: luci-app-tailscale$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1 || true)
+
+          autoupdate_ipk=""
+          tailscale_ipk=""
+          if [ -n "$a_line" ]; then
+            autoupdate_ipk=$(awk -v s="$a_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
+          fi
+          if [ -n "$t_line" ]; then
+            tailscale_ipk=$(awk -v s="$t_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
+          fi
 
           echo "luci-app-tailscale ipk: $tailscale_ipk"
           echo "luci-app-autoupdate ipk: $autoupdate_ipk"
@@ -90,17 +98,10 @@ jobs:
           grep -nE '^Package: luci-app-(tailscale|autoupdate)$' /tmp/waynesg.Packages || true
 
           echo "== sanity: extract Filename for each package (line-range until blank) =="
-          a_line=$(grep -n '^Package: luci-app-autoupdate$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1 || true)
-          t_line=$(grep -n '^Package: luci-app-tailscale$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1 || true)
           echo "autoupdate stanza starts at: ${a_line:-<none>}"
           echo "tailscale  stanza starts at: ${t_line:-<none>}"
-
-          if [ -n "$a_line" ]; then
-            awk -v s="$a_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | grep -E '^Filename: ' || true
-          fi
-          if [ -n "$t_line" ]; then
-            awk -v s="$t_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | grep -E '^Filename: ' || true
-          fi
+          echo "Filename: $autoupdate_ipk"
+          echo "Filename: $tailscale_ipk"
 
           test -n "$tailscale_ipk"
           test -n "$autoupdate_ipk"
