@@ -40,6 +40,16 @@ jobs:
           wget -O /tmp/ib.tar.zst "${IB_URL}"
           tar --use-compress-program=unzstd -xf /tmp/ib.tar.zst -C ib --strip-components=1
 
+      - name: Provide sha256 wrapper (ImageBuilder index script compatibility)
+        run: |
+          # Some ImageBuilder scripts/ipkg-make-index.sh variants call `sha256` (not present on Ubuntu runners).
+          # Provide a simple wrapper so package_index doesn't fail.
+          if ! command -v sha256 >/dev/null 2>&1; then
+            printf '%s\n' '#!/bin/sh' 'exec sha256sum "$@"' | sudo tee /usr/local/bin/sha256 >/dev/null
+            sudo chmod +x /usr/local/bin/sha256
+          fi
+          sha256 --help >/dev/null 2>&1 || true
+
       - name: Add waynesg feed (gh-pages)
         run: |
           cd ib
