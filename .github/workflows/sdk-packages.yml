@@ -48,6 +48,10 @@ jobs:
 
           # tailscale LuCI app
           git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/waynesg/luci-app-tailscale
+          # Fix packaging: luci-app must not ship /etc/config or /etc/init.d that belong to tailscale.
+          # Otherwise ImageBuilder opkg will fail with file clashes against the tailscale package.
+          rm -f package/waynesg/luci-app-tailscale/root/etc/config/tailscale || true
+          rm -f package/waynesg/luci-app-tailscale/root/etc/init.d/tailscale || true
 
           # autoupdate v2
           git clone --depth=1 -b 2.0 https://github.com/waynesg/luci-app-autoupdate package/waynesg/luci-app-autoupdate
