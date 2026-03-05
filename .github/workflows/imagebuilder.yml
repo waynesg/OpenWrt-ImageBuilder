@@ -69,6 +69,8 @@ jobs:
           set -e
           cd ib
           FEED_BASE="https://waynesg.github.io/OpenWrt-ImageBuilder/feed"
+          # Cache-bust GitHub Pages/CDN to ensure we fetch the latest index/ipks
+          FEED_QS="?ts=${GITHUB_RUN_ID}"
 
           # Disable opkg signature checking.
           # In opkg config, `option check_signature` is a boolean: if the line exists, it's ON
@@ -76,7 +78,7 @@ jobs:
           sed -i '/^option[[:space:]]\+check_signature/d' repositories.conf
 
           # Download index and extract the exact ipk filenames.
-          curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
+          curl -fsSL "$FEED_BASE/Packages.gz${FEED_QS}" | gzip -dc > /tmp/waynesg.Packages
 
           # Extract Filename for each package stanza (line-range until blank). Avoid python/regex edge cases.
           a_line=$(grep -n '^Package: luci-app-autoupdate$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1 || true)
@@ -107,8 +109,8 @@ jobs:
           test -n "$autoupdate_ipk"
 
           mkdir -p packages
-          curl -fL "$FEED_BASE/$tailscale_ipk" -o "packages/$tailscale_ipk"
-          curl -fL "$FEED_BASE/$autoupdate_ipk" -o "packages/$autoupdate_ipk"
+          curl -fL "$FEED_BASE/$tailscale_ipk${FEED_QS}" -o "packages/$tailscale_ipk"
+          curl -fL "$FEED_BASE/$autoupdate_ipk${FEED_QS}" -o "packages/$autoupdate_ipk"
 
           echo "== local packages dir =="
           ls -la packages | sed -n '1,120p'

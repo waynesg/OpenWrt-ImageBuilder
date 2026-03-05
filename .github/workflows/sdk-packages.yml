@@ -52,6 +52,8 @@ jobs:
           # Otherwise ImageBuilder opkg will fail with file clashes against the tailscale package.
           rm -f package/waynesg/luci-app-tailscale/root/etc/config/tailscale || true
           rm -f package/waynesg/luci-app-tailscale/root/etc/init.d/tailscale || true
+          echo "== luci-app-tailscale root/etc (after strip) =="
+          find package/waynesg/luci-app-tailscale/root -maxdepth 3 -type f 2>/dev/null | sed -n '1,200p' || true
 
           # autoupdate v2
           git clone --depth=1 -b 2.0 https://github.com/waynesg/luci-app-autoupdate package/waynesg/luci-app-autoupdate
@@ -63,6 +65,20 @@ jobs:
 
           make package/waynesg/luci-app-tailscale/compile V=s
           make package/waynesg/luci-app-autoupdate/compile V=s
+
+      - name: Verify luci-app-tailscale ipk does not contain tailscale init/config
+        run: |
+          set -e
+          cd sdk
+          ipk=$(find bin/packages -name 'luci-app-tailscale_*_all.ipk' | head -n 1)
+          echo "ipk=$ipk"
+          test -n "$ipk"
+          rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
+          cp "$ipk" /tmp/ipkcheck/pkg.ipk
+          cd /tmp/ipkcheck
+          ar x pkg.ipk
+          tar -tzf data.tar.gz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
+          echo "OK: no tailscale init/config in luci-app-tailscale ipk"
 
       - name: Collect feed
         run: |
