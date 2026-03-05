@@ -73,11 +73,35 @@ jobs:
           ipk=$(find bin/packages -name 'luci-app-tailscale_*_all.ipk' | head -n 1)
           echo "ipk=$ipk"
           test -n "$ipk"
+
+          echo "== file info =="
+          ls -la "$ipk"
+          file "$ipk" || true
+          head -c 32 "$ipk" | xxd || true
+
+          echo "== ar table =="
+          if ! ar t "$ipk"; then
+            echo "ERROR: ipk is not a valid ar archive (unexpected format)" >&2
+            exit 1
+          fi
+
           rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
           cp "$ipk" /tmp/ipkcheck/pkg.ipk
           cd /tmp/ipkcheck
           ar x pkg.ipk
-          tar -tzf data.tar.gz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
+
+          echo "== data.tar.* contents (tailscale files) =="
+          if [ -f data.tar.gz ]; then
+            tar -tzf data.tar.gz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
+          elif [ -f data.tar.xz ]; then
+            tar -tJf data.tar.xz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
+          elif [ -f data.tar.zst ]; then
+            zstd -dc data.tar.zst | tar -tf - | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
+          else
+            echo "WARN: no data.tar.* found in ipk" >&2
+            ls -la
+          fi
+
           echo "OK: no tailscale init/config in luci-app-tailscale ipk"
 
       - name: Collect feed
