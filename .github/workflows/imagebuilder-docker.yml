@@ -1,0 +1,86 @@
+name: ImageBuilder (docker, x86_64 24.10)
+
+on:
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+  FEED_BASE: https://waynesg.github.io/OpenWrt-ImageBuilder/feed
+  LUCI_VERSION: "24.10.0"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare FILES
+        run: |
+          set -e
+          rm -rf files
+          mkdir -p files
+          rsync -a image/files/ files/
+
+          chmod +x scripts/preset-clash-core.sh
+          scripts/preset-clash-core.sh amd64 files
+
+      - name: Download 3rd-party luci-app ipks
+        run: |
+          set -e
+          rm -rf packages && mkdir -p packages
+          curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
+
+          a_line=$(grep -n '^Package: luci-app-autoupdate$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1)
+          t_line=$(grep -n '^Package: luci-app-tailscale$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1)
+          autoupdate_ipk=$(awk -v s="$a_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
+          tailscale_ipk=$(awk -v s="$t_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
+
+          echo "autoupdate_ipk=$autoupdate_ipk"
+          echo "tailscale_ipk=$tailscale_ipk"
+          test -n "$autoupdate_ipk"
+          test -n "$tailscale_ipk"
+
+          # cache-bust
+          qs="?ts=${GITHUB_RUN_ID}"
+          curl -fL "$FEED_BASE/$autoupdate_ipk$qs" -o "packages/$autoupdate_ipk"
+          curl -fL "$FEED_BASE/$tailscale_ipk$qs" -o "packages/$tailscale_ipk"
+
+          ls -la packages
+
+      - name: Build via ImageBuilder container
+        run: |
+          set -e
+          docker pull "immortalwrt/imagebuilder:x86-64-openwrt-${LUCI_VERSION}"
+
+          docker run --rm -i \
+            --user root \
+            -v "${{ github.workspace }}/bin:/home/build/immortalwrt/bin" \
+            -v "${{ github.workspace }}/files:/home/build/immortalwrt/files" \
+            -v "${{ github.workspace }}/packages:/home/build/immortalwrt/packages" \
+            "immortalwrt/imagebuilder:x86-64-openwrt-${LUCI_VERSION}" \
+            /bin/bash -lc '
+              set -e
+              cd /home/build/immortalwrt
+
+              # Build local Packages index from downloaded ipks
+              rm -f packages/Packages packages/Packages.gz
+              rm -rf /tmp/opkg-utils
+              git clone --depth=1 https://git.yoctoproject.org/opkg-utils /tmp/opkg-utils
+              /tmp/opkg-utils/opkg-make-index packages > packages/Packages
+              gzip -9nc packages/Packages > packages/Packages.gz
+              grep -nE "^Package: luci-app-(tailscale|autoupdate)$" packages/Packages
+
+              make image PROFILE="generic" FILES="files" PACKAGES="\
+                luci \
+                tailscale \
+                luci-app-tailscale \
+                luci-app-autoupdate \
+              " V=s
+            '
+
+      - name: Upload images
+        uses: actions/upload-artifact@v4
+        with:
+          name: imagebuilder-docker-output
+          path: bin/targets/**
