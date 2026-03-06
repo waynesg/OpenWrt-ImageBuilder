@@ -115,8 +115,12 @@ jobs:
           echo "== local packages dir =="
           ls -la packages | sed -n '1,120p'
 
-          echo "== generate local Packages index =="
-          make package_index V=s CONFIG_SIGNATURE_CHECK= -j1
+          echo "== force rebuild local Packages index (no silent redirects) =="
+          rm -f packages/Packages packages/Packages.gz
+          ./scripts/ipkg-make-index.sh packages > packages/Packages
+          gzip -9nc packages/Packages > packages/Packages.gz
+          echo "== verify local Packages contains luci-app entries =="
+          grep -nE '^Package: luci-app-(tailscale|autoupdate)$' packages/Packages || { echo "ERROR: local index missing luci-app stanzas"; exit 1; }
 
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
