@@ -140,11 +140,9 @@ jobs:
           echo "== show repositories.conf (tail) =="
           tail -n 60 repositories.conf
 
-          echo "== opkg list from local repo (must show luci-app-*) =="
-          OPKG=staging_dir/host/bin/opkg
-          rm -rf /tmp/ibroot && mkdir -p /tmp/ibroot/tmp
-          $OPKG --offline-root /tmp/ibroot --conf ./repositories.conf update || true
-          $OPKG --offline-root /tmp/ibroot --conf ./repositories.conf list | grep -E '^luci-app-(tailscale|autoupdate) ' || true
+          echo "== preflight using ImageBuilder's own OPKG invocation (must show luci-app-*) =="
+          # Use make package_list so it uses the same OPKG flags + LISTS_DIR as the later make image.
+          make package_list V=s CONFIG_SIGNATURE_CHECK= -j1 | grep -E '^luci-app-(tailscale|autoupdate) ' || { echo "ERROR: make package_list can't see luci-app packages"; exit 1; }
 
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
