@@ -126,6 +126,20 @@ jobs:
           echo "== verify local Packages contains luci-app entries =="
           grep -nE '^Package: luci-app-(tailscale|autoupdate)$' packages/Packages || { echo "ERROR: local index missing luci-app stanzas"; exit 1; }
 
+          echo "== ensure local repo entry exists (append last) =="
+          # Ensure local repo is present and last in repositories.conf
+          sed -i '/^src[[:space:]]\+imagebuilder[[:space:]]\+file:packages/d' repositories.conf
+          echo 'src imagebuilder file:packages' >> repositories.conf
+
+          echo "== show repositories.conf (tail) =="
+          tail -n 40 repositories.conf
+
+          echo "== opkg list from local repo (must show luci-app-*) =="
+          OPKG=staging_dir/host/bin/opkg
+          rm -rf /tmp/ibroot && mkdir -p /tmp/ibroot/tmp
+          $OPKG --offline-root /tmp/ibroot --conf ./repositories.conf update || true
+          $OPKG --offline-root /tmp/ibroot --conf ./repositories.conf list | grep -E '^luci-app-(tailscale|autoupdate) ' || true
+
       - name: Prepare FILES (defaults + openclash core/ui)
         run: |
           # Start from repo provided files
