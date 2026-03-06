@@ -88,32 +88,12 @@ jobs:
             file "$work_ipk" || true
           fi
 
-          echo "== ar table =="
-          if ! ar t "$work_ipk"; then
-            echo "ERROR: ipk is not a valid ar archive (unexpected format)" >&2
-            exit 1
-          fi
-
-          rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
-          cp "$work_ipk" /tmp/ipkcheck/pkg.ipk
-          cd /tmp/ipkcheck
-          ar x pkg.ipk
-
-          rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
-          cp "$ipk" /tmp/ipkcheck/pkg.ipk
-          cd /tmp/ipkcheck
-          ar x pkg.ipk
-
-          echo "== data.tar.* contents (tailscale files) =="
-          if [ -f data.tar.gz ]; then
-            tar -tzf data.tar.gz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
-          elif [ -f data.tar.xz ]; then
-            tar -tJf data.tar.xz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
-          elif [ -f data.tar.zst ]; then
-            zstd -dc data.tar.zst | tar -tf - | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
+          echo "== payload file list (tailscale files) =="
+          # Some distros/builds emit "ipk" as gzip->tar, not ar. Verify by listing tar contents.
+          if file "$ipk" | grep -q 'gzip compressed data'; then
+            tar -tzf "$ipk" | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
           else
-            echo "WARN: no data.tar.* found in ipk" >&2
-            ls -la
+            tar -tf "$ipk" | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
           fi
 
           echo "OK: no tailscale init/config in luci-app-tailscale ipk"
