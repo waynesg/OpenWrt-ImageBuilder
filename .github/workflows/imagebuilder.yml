@@ -40,19 +40,22 @@ jobs:
           wget -O /tmp/ib.tar.zst "${IB_URL}"
           tar --use-compress-program=unzstd -xf /tmp/ib.tar.zst -C ib --strip-components=1
 
-      - name: Patch ImageBuilder opkg verification (allow unsigned local repo)
+      - name: Patch ImageBuilder opkg settings (allow unsigned local repo + stable lists dir)
         run: |
           cd ib
-          # ImageBuilder invokes opkg with --verify-program $(SCRIPT_DIR)/opkg-key, which makes it expect Packages.sig
-          # even for the local file:packages repo. For CI we want to allow unsigned local packages.
-          # The OPKG definition spans multiple lines; simplest is to delete the whole line containing --verify-program.
+          # 1) Remove signature verification helper so local file:packages doesn't require Packages.sig
           sed -i '/--verify-program/d' Makefile
+
+          # 2) Pin LISTS_DIR to a stable absolute path under TOPDIR.
+          # The default Makefile computes a relative lists dir based on TARGET_DIR, which can diverge
+          # between update and install phases and cause "Unknown package".
+          mkdir -p dl/opkg-lists
+          sed -i -E 's#^LISTS_DIR:=.*#LISTS_DIR:=$(TOPDIR)/dl/opkg-lists#' Makefile
 
           echo "== verify-program occurrences (should be empty) =="
           grep -n -- "--verify-program" Makefile || true
-
-          echo "== OPKG definition (context) =="
-          awk 'NR>=88 && NR<=110 {print NR ":" $0}' Makefile
+          echo "== LISTS_DIR =="
+          grep -n '^LISTS_DIR:=' Makefile || true
 
       - name: Provide sha256 wrapper (ImageBuilder index script compatibility)
         run: |
@@ -131,10 +134,8 @@ jobs:
           sed -i '/^src[[:space:]]\+imagebuilder[[:space:]]\+file:packages/d' repositories.conf
           echo 'src imagebuilder file:packages' >> repositories.conf
 
-          echo "== pin opkg lists_dir (avoid Makefile relative-path lists-dir quirks) =="
-          mkdir -p dl/opkg-lists
+          # Remove unsupported lists_dir option (opkg in this ImageBuilder doesn't accept it in conf)
           sed -i '/^option[[:space:]]\+lists_dir/d' repositories.conf
-          echo "option lists_dir $(pwd)/dl/opkg-lists" >> repositories.conf
 
           echo "== show repositories.conf (tail) =="
           tail -n 60 repositories.conf
