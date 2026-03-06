@@ -41,8 +41,9 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Add third-party package sources (minimal)
+      - name: Add third-party package sources (waynesg set)
         run: |
+          set -e
           cd sdk
           mkdir -p package/waynesg
 
@@ -52,19 +53,65 @@ jobs:
           # Otherwise ImageBuilder opkg will fail with file clashes against the tailscale package.
           rm -f package/waynesg/luci-app-tailscale/root/etc/config/tailscale || true
           rm -f package/waynesg/luci-app-tailscale/root/etc/init.d/tailscale || true
-          echo "== luci-app-tailscale root/etc (after strip) =="
-          find package/waynesg/luci-app-tailscale/root -maxdepth 3 -type f 2>/dev/null | sed -n '1,200p' || true
 
           # autoupdate v2
           git clone --depth=1 -b 2.0 https://github.com/waynesg/luci-app-autoupdate package/waynesg/luci-app-autoupdate
 
-      - name: Select packages and build (minimal)
+          # argon theme config
+          git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/waynesg/luci-app-argon-config
+
+          # aurora theme config
+          git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config package/waynesg/luci-app-aurora-config
+
+          # mosdns v5
+          git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/waynesg/luci-app-mosdns
+
+          # wechatpush
+          git clone --depth=1 -b master https://github.com/tty228/luci-app-wechatpush package/waynesg/luci-app-wechatpush
+
+          # onliner
+          git clone --depth=1 https://github.com/Hyy2001X/AutoBuild-Packages package/waynesg/AutoBuild-Packages
+          cp -a package/waynesg/AutoBuild-Packages/luci-app-onliner package/waynesg/luci-app-onliner
+
+          # airconnect (luci-app + core)
+          git clone --depth=1 -b main https://github.com/sbwml/luci-app-airconnect package/waynesg/luci-app-airconnect
+          cp -a package/waynesg/luci-app-airconnect/airconnect package/waynesg/airconnect
+
+          # timecontrol
+          git clone --depth=1 -b main https://github.com/sirpdboy/luci-app-timecontrol package/waynesg/luci-app-timecontrol
+
+          # subconverter
+          git clone --depth=1 https://github.com/kiddin9/openwrt-subconverter package/waynesg/luci-app-subconverter
+
+          # yt-dlp
+          git clone --depth=1 https://github.com/liudf0716/luci-app-yt-dlp package/waynesg/luci-app-yt-dlp
+
+      - name: Select packages and build (waynesg set)
         run: |
+          set -e
           cd sdk
           make defconfig
 
-          make package/waynesg/luci-app-tailscale/compile V=s
-          make package/waynesg/luci-app-autoupdate/compile V=s
+          # keep this list modest; add heavy stacks (openclash/passwall2) later
+          TARGETS=(
+            luci-app-tailscale
+            luci-app-autoupdate
+            luci-app-argon-config
+            luci-app-aurora-config
+            luci-app-mosdns
+            luci-app-wechatpush
+            luci-app-onliner
+            luci-app-airconnect
+            airconnect
+            luci-app-timecontrol
+            luci-app-subconverter
+            luci-app-yt-dlp
+          )
+
+          for p in "${TARGETS[@]}"; do
+            echo "== compile: $p =="
+            make "package/waynesg/$p/compile" V=s
+          done
 
       - name: Normalize ipk format (convert tar-based ipk to classic ar ipk)
         run: |

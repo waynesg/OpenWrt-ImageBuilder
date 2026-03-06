@@ -25,26 +25,48 @@ jobs:
           chmod +x scripts/preset-clash-core.sh
           scripts/preset-clash-core.sh amd64 files
 
-      - name: Download 3rd-party luci-app ipks
+      - name: Download 3rd-party ipks (from waynesg feed)
         run: |
-          set -e
+          set -euo pipefail
           rm -rf packages && mkdir -p packages
           curl -fsSL "$FEED_BASE/Packages.gz" | gzip -dc > /tmp/waynesg.Packages
 
-          a_line=$(grep -n '^Package: luci-app-autoupdate$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1)
-          t_line=$(grep -n '^Package: luci-app-tailscale$' /tmp/waynesg.Packages | head -n1 | cut -d: -f1)
-          autoupdate_ipk=$(awk -v s="$a_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
-          tailscale_ipk=$(awk -v s="$t_line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
-
-          echo "autoupdate_ipk=$autoupdate_ipk"
-          echo "tailscale_ipk=$tailscale_ipk"
-          test -n "$autoupdate_ipk"
-          test -n "$tailscale_ipk"
+          want_pkgs=(
+            luci-app-autoupdate
+            luci-app-tailscale
+            luci-app-argon-config
+            luci-app-aurora-config
+            luci-app-mosdns
+            luci-app-wechatpush
+            luci-app-onliner
+            luci-app-airconnect
+            airconnect
+            luci-app-timecontrol
+            luci-app-subconverter
+            luci-app-yt-dlp
+          )
 
           # cache-bust
           qs="?ts=${GITHUB_RUN_ID}"
-          curl -fL "$FEED_BASE/$autoupdate_ipk$qs" -o "packages/$autoupdate_ipk"
-          curl -fL "$FEED_BASE/$tailscale_ipk$qs" -o "packages/$tailscale_ipk"
+
+          fetch_one() {
+            local pkg="$1"
+            local line
+            local ipk
+            line=$(grep -n "^Package: ${pkg}$" /tmp/waynesg.Packages | head -n1 | cut -d: -f1 || true)
+            if [ -z "$line" ]; then
+              echo "[skip] $pkg not found in feed index"
+              return 0
+            fi
+            ipk=$(awk -v s="$line" 'NR>=s{print; if($0=="") exit}' /tmp/waynesg.Packages | sed -n 's/^Filename: //p' | head -n1)
+            echo "[get] $pkg -> $ipk"
+            test -n "$ipk"
+            curl -fL "$FEED_BASE/$ipk$qs" -o "packages/$ipk"
+          }
+
+          for p in "${want_pkgs[@]}"; do
+            fetch_one "$p"
+          done
 
           ls -la packages
 
@@ -82,6 +104,9 @@ jobs:
                 luci-app-openvpn luci-app-openvpn-server luci-app-zerotier \
                 tailscale luci-app-tailscale \
                 luci-app-autoupdate \
+                luci-app-argon-config luci-app-aurora-config luci-app-mosdns \
+                luci-app-wechatpush luci-app-onliner luci-app-airconnect luci-app-timecontrol \
+                luci-app-subconverter luci-app-yt-dlp \
                 luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
 
               # docker/containerd + luci apps make rootfs much larger than default; enlarge ext4 rootfs (MiB)
