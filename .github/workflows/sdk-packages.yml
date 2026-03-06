@@ -66,6 +66,51 @@ jobs:
           make package/waynesg/luci-app-tailscale/compile V=s
           make package/waynesg/luci-app-autoupdate/compile V=s
 
+      - name: Normalize ipk format (convert tar-based ipk to classic ar ipk)
+        run: |
+          set -e
+          cd sdk
+          shopt -s nullglob
+
+          repack_one() {
+            local p="$1"
+            local tmpd
+            tmpd=$(mktemp -d)
+
+            # If it's gzip, decompress first.
+            local src="$p"
+            if file "$p" | grep -q 'gzip compressed data'; then
+              src="$tmpd/src.tar"
+              gunzip -c "$p" > "$src"
+            fi
+
+            if ! file "$src" | grep -q 'tar archive'; then
+              rm -rf "$tmpd"
+              return 0
+            fi
+
+            # Extract the three members and reassemble as ar.
+            tar -xf "$src" -C "$tmpd"
+            test -f "$tmpd/debian-binary"
+            test -f "$tmpd/control.tar.gz"
+            test -f "$tmpd/data.tar.gz"
+
+            local out="$tmpd/out.ipk"
+            (cd "$tmpd" && ar r "$out" debian-binary control.tar.gz data.tar.gz >/dev/null)
+
+            # Replace original
+            mv "$out" "$p"
+            rm -rf "$tmpd"
+          }
+
+          # Repack any ipk that is actually a tar (or gzip->tar)
+          while IFS= read -r p; do
+            echo "== normalize: $p =="
+            file "$p" || true
+            repack_one "$p"
+            echo "after: $(file -b "$p" || true)"
+          done < <(find bin/packages -name '*.ipk' -type f)
+
       - name: Verify luci-app-tailscale ipk does not contain tailscale init/config
         run: |
           set -e
@@ -77,25 +122,15 @@ jobs:
           echo "== file info =="
           ls -la "$ipk"
           file "$ipk" || true
-          head -c 32 "$ipk" | xxd || true
+          ar t "$ipk" | sed -n '1,20p'
 
-          # Some environments produce gzipped ipk blobs. Normalize for inspection.
-          work_ipk="$ipk"
-          if file "$ipk" | grep -q 'gzip compressed data'; then
-            work_ipk=/tmp/luci-app-tailscale.ipk
-            gunzip -c "$ipk" > "$work_ipk"
-            echo "Decompressed to $work_ipk"
-            file "$work_ipk" || true
-          fi
+          rm -rf /tmp/ipkcheck && mkdir -p /tmp/ipkcheck
+          cp "$ipk" /tmp/ipkcheck/pkg.ipk
+          cd /tmp/ipkcheck
+          ar x pkg.ipk
 
-          echo "== payload file list (tailscale files) =="
-          # Some distros/builds emit "ipk" as gzip->tar, not ar. Verify by listing tar contents.
-          if file "$ipk" | grep -q 'gzip compressed data'; then
-            tar -tzf "$ipk" | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
-          else
-            tar -tf "$ipk" | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
-          fi
-
+          echo "== data.tar.gz contains tailscale files? =="
+          tar -tzf data.tar.gz | grep -E '^\./etc/(config/tailscale|init\.d/tailscale)$' && { echo "ERROR: file clash payload still present"; exit 1; } || true
           echo "OK: no tailscale init/config in luci-app-tailscale ipk"
 
       - name: Collect feed
