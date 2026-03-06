@@ -83,10 +83,8 @@ jobs:
           # subconverter
           git clone --depth=1 https://github.com/kiddin9/openwrt-subconverter package/waynesg/luci-app-subconverter
 
-          # yt-dlp
-          git clone --depth=1 https://github.com/liudf0716/luci-app-yt-dlp package/waynesg/luci-app-yt-dlp
-          # Fix luci.mk include path (repo assumes it's placed under feeds/luci/...)
-          sed -i 's|^include ../../luci\.mk$|include $(TOPDIR)/feeds/luci/luci.mk|' package/waynesg/luci-app-yt-dlp/Makefile
+          # yt-dlp (removed)
+          # git clone --depth=1 https://github.com/liudf0716/luci-app-yt-dlp package/waynesg/luci-app-yt-dlp
 
       - name: Select packages and build (waynesg set)
         run: |
@@ -107,7 +105,7 @@ jobs:
             airconnect
             luci-app-timecontrol
             luci-app-subconverter
-            luci-app-yt-dlp
+            # luci-app-yt-dlp (removed)
           )
 
           echo "== waynesg package dirs =="

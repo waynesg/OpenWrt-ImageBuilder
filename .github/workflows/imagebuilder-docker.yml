@@ -43,7 +43,7 @@ jobs:
             airconnect
             luci-app-timecontrol
             luci-app-subconverter
-            luci-app-yt-dlp
+            # luci-app-yt-dlp (removed)
           )
 
           # cache-bust
@@ -106,7 +106,7 @@ jobs:
                 luci-app-autoupdate \
                 luci-app-argon-config luci-app-aurora-config luci-app-mosdns \
                 luci-app-wechatpush luci-app-onliner luci-app-airconnect luci-app-timecontrol \
-                luci-app-subconverter luci-app-yt-dlp \
+                luci-app-subconverter \
                 luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
 
               # docker/containerd + luci apps make rootfs much larger than default; enlarge ext4 rootfs (MiB)
