@@ -1,0 +1,4517 @@
+Package: aircard-pcmcia-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 021d4e49dc2ae2d807db212ae8f71984
+Size: 1184
+Filename: aircard-pcmcia-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Sierra Wireless Aircard 555/7xx/8x0 firmware
+
+
+Package: airconnect
+Version: 1.9.3-r1
+Depends: libc
+Section: multimedia
+Architecture: x86_64
+Maintainer: sbwml <admin@cooluc.com>
+MD5Sum: da9c1af6cbfe109ba045fc6770cb0846
+Size: 5803704
+Filename: airconnect_1.9.3-r1_x86_64.ipk
+Source: feeds/base/waynesg/airconnect
+Description: Use AirPlay to stream to UPnP/Sonos & Chromecast devices
+License: MIT
+
+
+Package: airoha-en8811h-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: a7c80c1817178b170e29bf5df27fb6ed
+Size: 57018
+Filename: airoha-en8811h-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Airoha EN8811H 2.5G Ethernet PHY firmware
+
+
+Package: amd64-microcode
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: ac2c69c10b08478b3033e2837fc22e3b
+Size: 56656
+Filename: amd64-microcode_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: AMD64 CPU microcode
+
+
+Package: amdgpu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 237e2c44f80178323681c9d155ceb7de
+Size: 32739916
+Filename: amdgpu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: AMDGPU Video Driver firmware
+
+
+Package: ar3k-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 2f9ddbcbc905303614aa84cac31c9479
+Size: 980102
+Filename: ar3k-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath3k firmware
+
+
+Package: ath10k-board-qca4019
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 273a82d80560640f4cef26054d121112
+Size: 84232
+Filename: ath10k-board-qca4019_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca4019 board firmware
+
+
+Package: ath10k-board-qca9377-sdio
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: dca13b1b09e939be16487e10efd2e4c9
+Size: 2282
+Filename: ath10k-board-qca9377-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9377 board sdio firmware
+
+
+Package: ath10k-board-qca9377
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: abba4759da280a2ea72f9a59b250b4ee
+Size: 9138
+Filename: ath10k-board-qca9377_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9377 board firmware
+
+
+Package: ath10k-board-qca9887
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 88df62b04b73985d85d4fd2e903b7c15
+Size: 1442
+Filename: ath10k-board-qca9887_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9887 board firmware
+
+
+Package: ath10k-board-qca9888
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 31be2db5245f13e41e9123b973de6496
+Size: 9130
+Filename: ath10k-board-qca9888_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9888 board firmware
+
+
+Package: ath10k-board-qca988x
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: fa84c02d4fcf2b199243099e9757e4f1
+Size: 1544
+Filename: ath10k-board-qca988x_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca988x board firmware
+
+
+Package: ath10k-board-qca9984
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: ddf546af473dc03c8a1fdb68cf40f27f
+Size: 15264
+Filename: ath10k-board-qca9984_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9984 board firmware
+
+
+Package: ath10k-board-qca99x0
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 80cbe612545bf9e89be3913024ecc1e5
+Size: 8326
+Filename: ath10k-board-qca99x0_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca99x0 board firmware
+
+
+Package: ath10k-firmware-qca4019
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: d2644130da01869f5953bc729e0fc4a4
+Size: 467728
+Filename: ath10k-firmware-qca4019_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca4019 firmware
+
+
+Package: ath10k-firmware-qca6174
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: b8246cbc352545556a41d1ecc3dd59a1
+Size: 879306
+Filename: ath10k-firmware-qca6174_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca6174 firmware
+
+
+Package: ath10k-firmware-qca9377-sdio
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca9377-sdio
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 2358497abd9c3989c211eafc7a73a11d
+Size: 412164
+Filename: ath10k-firmware-qca9377-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9377 sdio firmware
+
+
+Package: ath10k-firmware-qca9377
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca9377
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 70f425fd869a37dd0be730ba836169ea
+Size: 524924
+Filename: ath10k-firmware-qca9377_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9377 firmware
+
+
+Package: ath10k-firmware-qca9887
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca9887
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 858d8e100d05dc27eac1f3a990a42693
+Size: 209686
+Filename: ath10k-firmware-qca9887_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9887 firmware
+
+
+Package: ath10k-firmware-qca9888
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca9888
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: ee17c1a32e580c9f2b3cddda3059faeb
+Size: 529950
+Filename: ath10k-firmware-qca9888_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9888 firmware
+
+
+Package: ath10k-firmware-qca988x
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca988x
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e77ebf800008c99165d973b3e9605736
+Size: 219656
+Filename: ath10k-firmware-qca988x_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca988x firmware
+
+
+Package: ath10k-firmware-qca9984
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca9984
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c647b5210169d733d2bae07328fd8d1b
+Size: 523320
+Filename: ath10k-firmware-qca9984_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca9984 firmware
+
+
+Package: ath10k-firmware-qca99x0
+Version: 20241110-r2
+Depends: libc, ath10k-board-qca99x0
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 23c739ab67290009269e2c8c9e6efc5a
+Size: 374458
+Filename: ath10k-firmware-qca99x0_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: ath10k qca99x0 firmware
+
+
+Package: ath11k-firmware-qca6390
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c951f93bae0868d3fc0f9664f5356d3c
+Size: 1768250
+Filename: ath11k-firmware-qca6390_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: QCA6390 ath11k firmware
+
+
+Package: ath11k-firmware-wcn6750
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 55838e05a4284fab60b91453041bbe54
+Size: 3671996
+Filename: ath11k-firmware-wcn6750_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: WCN6750 ath11k firmware
+
+
+Package: ath11k-firmware-wcn6855
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3b2283e4e9794d4d51a9b4c48d4e4a1d
+Size: 3198620
+Filename: ath11k-firmware-wcn6855_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: WCN6855 ath11k firmware
+
+
+Package: ath12k-firmware-wcn7850
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 812316ed9868645bf8e79607a36a123d
+Size: 3433140
+Filename: ath12k-firmware-wcn7850_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: WCN7850 ath12k firmware
+
+
+Package: ath6k-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3f2b690221142bce2cfb1dfe94c3229e
+Size: 712820
+Filename: ath6k-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: AR600X firmware
+
+
+Package: ath9k-htc-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 2a9a4a2fcf6f9ba244a1c15ba2b15d22
+Size: 62632
+Filename: ath9k-htc-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: AR9271/AR7010 firmware
+
+
+Package: bash
+Version: 5.2.32-r1
+Depends: libc, libncurses6, libreadline8
+Section: utils
+Architecture: x86_64
+Maintainer: Marcel Denia <naoir@gmx.net>
+MD5Sum: 09ca3fb05c8865419e4b5fa9cebdc190
+Size: 480532
+Filename: bash_5.2.32-r1_x86_64.ipk
+Source: feeds/packages/utils/bash
+Description: Bash is an sh-compatible command language interpreter that executes
+License: GPL-3.0-or-later
+
+
+Package: bc
+Version: 1.07.1-r1
+Depends: libc, libreadline8, libncurses6
+Section: utils
+Architecture: x86_64
+Maintainer: Aleksey Vasilenko <aleksey.vasilenko@gmail.com>
+MD5Sum: 29d488e4505634952ee54d5da72e65d8
+Size: 37188
+Filename: bc_1.07.1-r1_x86_64.ipk
+Source: feeds/packages/utils/bc
+Description: bc is a language that supports arbitrary precision numbers with
+License: GPL-3.0-or-later
+
+
+Package: bnx2-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e285202b72296132d18d3f2f74128a14
+Size: 105904
+Filename: bnx2-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM5706/5708/5709/5716 firmware
+
+
+Package: bnx2x-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 1e101da15ce13ecd0bc0b20c55487941
+Size: 2422552
+Filename: bnx2x-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: =QLogic 5771x/578xx firmware
+
+
+Package: brcmfmac-firmware-4329-sdio
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 77c802186e2f80da4bdd92643a20624e
+Size: 177798
+Filename: brcmfmac-firmware-4329-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM4329 FullMac SDIO firmware
+
+
+Package: brcmfmac-firmware-4339-sdio
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 335821c7f074b8269e2beffdd27c4d25
+Size: 342892
+Filename: brcmfmac-firmware-4339-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom 4339 FullMAC SDIO firmware
+
+
+Package: brcmfmac-firmware-43430a0-sdio
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 63bb7bb85bd27e29cff7d4fa10c0561e
+Size: 259902
+Filename: brcmfmac-firmware-43430a0-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM43430a0 FullMac SDIO firmware
+
+
+Package: brcmfmac-firmware-43602a1-pcie
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: da4c8bdbbf5e3daf1769759476ee5950
+Size: 371052
+Filename: brcmfmac-firmware-43602a1-pcie_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom 43602a1 FullMAC PCIe firmware
+
+
+Package: brcmfmac-firmware-4366b1-pcie
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 5af0d8374b9cbe52a213c4ac8bb93e6f
+Size: 638106
+Filename: brcmfmac-firmware-4366b1-pcie_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom 4366b1 FullMAC PCIe firmware
+
+
+Package: brcmfmac-firmware-4366c0-pcie
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 84673e26c35e25ca6f7e57bb816b2b02
+Size: 648366
+Filename: brcmfmac-firmware-4366c0-pcie_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom 4366c0 FullMAC PCIe firmware
+
+
+Package: brcmfmac-firmware-usb
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: b3f7cac399f9c239b49ac782a42153b4
+Size: 503758
+Filename: brcmfmac-firmware-usb_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM43xx fullmac USB firmware
+
+
+Package: brcmfmac-nvram-43430-sdio
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 74e74091b85d2288e484ae4e5aab521f
+Size: 2176
+Filename: brcmfmac-nvram-43430-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM43430 SDIO NVRAM
+
+
+Package: brcmfmac-nvram-43455-sdio
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 1dd8d52707dc6cb098f182fa23b1ff91
+Size: 3402
+Filename: brcmfmac-nvram-43455-sdio_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM43455 SDIO NVRAM
+
+
+Package: brcmsmac-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e1683094e6a7306709103616935accf5
+Size: 42950
+Filename: brcmsmac-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Broadcom BCM43xx softmac PCIe firmware
+
+
+Package: ca-bundle
+Version: 20250419-r1
+Depends: libc
+Provides: ca-certs
+Section: base
+Architecture: all
+MD5Sum: 826d1c42c0da09e06adf3a182e337e21
+Size: 131032
+Filename: ca-bundle_20250419-r1_all.ipk
+Source: feeds/base/package/system/ca-certificates
+Description: System CA certificates as a bundle
+License: GPL-2.0-or-later MPL-2.0
+
+
+Package: ca-certificates
+Version: 20250419-r1
+Depends: libc
+Provides: ca-certs
+Section: base
+Architecture: all
+MD5Sum: 5a8bbc543cdd040bdbd22a975f6c573a
+Size: 142294
+Filename: ca-certificates_20250419-r1_all.ipk
+Source: feeds/base/package/system/ca-certificates
+Description: System CA certificates
+License: GPL-2.0-or-later MPL-2.0
+
+
+Package: carl9170-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 140ab273a9f271a8ed6ee25e99620719
+Size: 10504
+Filename: carl9170-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: AR9170 firmware
+
+
+Package: cgi-io
+Version: 2022.08.10~901b0f04-r21
+Depends: libc, libubox20240329, libubus20250102
+Section: net
+Architecture: x86_64
+Maintainer: John Crispin <blogic@openwrt.org>
+MD5Sum: 4ba68b68677e816d37a803880d80309f
+Size: 9622
+Filename: cgi-io_2022.08.10~901b0f04-r21_x86_64.ipk
+Source: feeds/packages/net/cgi-io
+Description: This package contains an cgi utility that is useful for up/downloading files
+License: GPL-2.0-or-later
+
+
+Package: conntrack
+Version: 1.4.8-r1
+Depends: libc, libnetfilter-conntrack3, libnetfilter-cttimeout1, libnetfilter-cthelper0, libnetfilter-queue1
+Section: net
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 4bb7ec9fe7852ad8ae6ac554713bb332
+Size: 26738
+Filename: conntrack_1.4.8-r1_x86_64.ipk
+Source: feeds/packages/net/conntrack-tools
+Description: Conntrack is a userspace command line program targeted at system
+License: GPL-2.0-or-later
+
+
+Package: conntrackd
+Version: 1.4.8-r1
+Depends: libc, libnetfilter-conntrack3, libnetfilter-cttimeout1, libnetfilter-cthelper0, libnetfilter-queue1
+Section: net
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 5f08a225df3ab9fe37760656860dd467
+Size: 83794
+Filename: conntrackd_1.4.8-r1_x86_64.ipk
+Source: feeds/packages/net/conntrack-tools
+Description: Conntrackd can replicate the status of the connections that are
+License: GPL-2.0-or-later
+
+
+Package: curl
+Version: 8.10.1-r1
+Depends: libc, libcurl4
+Section: net
+Architecture: x86_64
+Maintainer: Aleksey Vasilenko <aleksey.vasilenko@gmail.com>
+MD5Sum: a1b5f5c7e6d0a7f8a5004c438fffe4ee
+Size: 65884
+Filename: curl_8.10.1-r1_x86_64.ipk
+Source: feeds/packages/net/curl
+Description: A client-side URL transfer utility
+License: MIT
+
+
+Package: dc
+Version: 1.07.1-r1
+Depends: libc, bc
+Section: utils
+Architecture: x86_64
+Maintainer: Aleksey Vasilenko <aleksey.vasilenko@gmail.com>
+MD5Sum: c993581573409c29a0c64862d20e7665
+Size: 20708
+Filename: dc_1.07.1-r1_x86_64.ipk
+Source: feeds/packages/utils/bc
+Description: dc is a reverse-polish desk calculator which supports unlimited
+License: GPL-3.0-or-later
+
+
+Package: e100-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: f3686eb10858aa03fdc16d7bf9f9848c
+Size: 1554
+Filename: e100-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel e100
+
+
+Package: edgeport-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 1d70b7fe97ccaed105e982495361ec9e
+Size: 19640
+Filename: edgeport-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: USB Inside Out Edgeport Serial Driver firmware
+
+
+Package: eip197-mini-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 7688ee40e987c299b6f279c9786af5ee
+Size: 1162
+Filename: eip197-mini-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Inside Secure EIP197 mini firmware
+
+
+Package: i915-firmware-dmc
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c73aa5c2822d926e37946f61c397dd9b
+Size: 250584
+Filename: i915-firmware-dmc_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel I915 DMC firmware
+
+
+Package: i915-firmware-gsc
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 2fd94c46cf8173f0ce9262c8f2df9cc7
+Size: 759142
+Filename: i915-firmware-gsc_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel I915 GSC firmware
+
+
+Package: i915-firmware-guc
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c860b15cae481f71b8e80e145c7423ca
+Size: 7230312
+Filename: i915-firmware-guc_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel I915 GUC firmware
+
+
+Package: i915-firmware-huc
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 7ed793d0afb3face546ce36b8dbf6571
+Size: 3138994
+Filename: i915-firmware-huc_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel I915 HUC firmware
+
+
+Package: i915-firmware
+Version: 20241110-r2
+Depends: libc, i915-firmware-dmc, i915-firmware-guc, i915-firmware-huc, i915-firmware-gsc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: fecc7b4a9b4568bff82a8660e4ab622d
+Size: 872
+Filename: i915-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel I915 firmware \(meta package\)
+
+
+Package: ibt-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: cdc0b1e119de264c9d58dd0517ad5097
+Size: 22333210
+Filename: ibt-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel bluetooth firmware
+
+
+Package: iputils-arping
+Version: 20240905-r1
+Depends: libc
+Section: net
+Architecture: x86_64
+Maintainer: Noah Meyerhans <frodo@morgul.net>
+MD5Sum: c4f48a0d493e073b9dc9e9372dd45c97
+Size: 9098
+Filename: iputils-arping_20240905-r1_x86_64.ipk
+Source: feeds/packages/net/iputils
+Description: Send ARP REQUEST packets to a neighbor host
+License: BSD-3-Clause
+
+
+Package: iputils-clockdiff
+Version: 20240905-r1
+Depends: libc
+Section: net
+Architecture: x86_64
+Maintainer: Noah Meyerhans <frodo@morgul.net>
+MD5Sum: c1d23a3e9dac1872000ca58bfa7e9fc2
+Size: 6494
+Filename: iputils-clockdiff_20240905-r1_x86_64.ipk
+Source: feeds/packages/net/iputils
+Description: Measure the clock difference between two hosts
+License: BSD-3-Clause
+
+
+Package: iputils-ping
+Version: 20240905-r1
+Depends: libc, kmod-crypto-md5
+Provides: iputils-ping6
+Section: net
+Architecture: x86_64
+Maintainer: Noah Meyerhans <frodo@morgul.net>
+MD5Sum: 8e980221d077d56f1936dbfe0b8a4625
+Size: 30232
+Filename: iputils-ping_20240905-r1_x86_64.ipk
+Source: feeds/packages/net/iputils
+Description: Send ICMP_ECHOREQUEST packets to IP hosts and report on replies
+License: BSD-3-Clause
+
+
+Package: iputils-tracepath
+Version: 20240905-r1
+Depends: libc
+Section: net
+Architecture: x86_64
+Maintainer: Noah Meyerhans <frodo@morgul.net>
+MD5Sum: cea6710c06eba797e53a8f25ae8160e6
+Size: 7042
+Filename: iputils-tracepath_20240905-r1_x86_64.ipk
+Source: feeds/packages/net/iputils
+Description: trace network path to a host, discovering PMTU
+License: BSD-3-Clause
+
+
+Package: iwinfo
+Version: 2024.10.20~b94f066e-r1
+Depends: libc, libiwinfo20230701
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 28bb8fc1650fe77262816e361cbfa9ce
+Size: 7594
+Filename: iwinfo_2024.10.20~b94f066e-r1_x86_64.ipk
+Source: feeds/base/package/network/utils/iwinfo
+Description: Command line frontend for the wireless information library.
+License: GPL-2.0
+
+
+Package: iwl3945-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 41766bed53d540f97672134f7e21c9cb
+Size: 64304
+Filename: iwl3945-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel IWL3945 firmware
+
+
+Package: iwl4965-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 93716e899f44ee8e79933e6f8e1bb73f
+Size: 79354
+Filename: iwl4965-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel IWL4965 firmware
+
+
+Package: iwlwifi-firmware-ax101
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3379ca52e97d75c60e89bd8660e592d9
+Size: 592900
+Filename: iwlwifi-firmware-ax101_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel AX101 firmware
+
+
+Package: iwlwifi-firmware-ax200
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 5bcb03fae9d7d007717a77a955ad28e1
+Size: 550606
+Filename: iwlwifi-firmware-ax200_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel AX200 firmware
+
+
+Package: iwlwifi-firmware-ax201
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: bbec78bd2fa3f90ed0f056d0b8998a02
+Size: 559390
+Filename: iwlwifi-firmware-ax201_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel AX201 firmware
+
+
+Package: iwlwifi-firmware-ax210
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 1dab30e7b30ad0f0a2814b6b6df08212
+Size: 663176
+Filename: iwlwifi-firmware-ax210_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel AX210 firmware
+
+
+Package: iwlwifi-firmware-ax411
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: a0484ebfc39e7ec21eea3a7859feb7ba
+Size: 607212
+Filename: iwlwifi-firmware-ax411_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel AX411 firmware
+
+
+Package: iwlwifi-firmware-be200
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 931c7713598159d7300f5a74ba6b7a88
+Size: 754876
+Filename: iwlwifi-firmware-be200_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel BE200 firmware
+
+
+Package: iwlwifi-firmware-iwl1000
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 4120ad57b82a9c37693a3806e2f123f8
+Size: 177734
+Filename: iwlwifi-firmware-iwl1000_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino Wireless-N 1000 firmware
+
+
+Package: iwlwifi-firmware-iwl100
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 4d88db361c84dcc90deade330ac85000
+Size: 177738
+Filename: iwlwifi-firmware-iwl100_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino Wireless-N 100 firmware
+
+
+Package: iwlwifi-firmware-iwl105
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 1aa1b7bcb5d139a25901a40489a6a808
+Size: 333690
+Filename: iwlwifi-firmware-iwl105_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino Wireless-N 105 firmware
+
+
+Package: iwlwifi-firmware-iwl135
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: d92cfc729d7bab0e0ae5097ce356aae7
+Size: 342542
+Filename: iwlwifi-firmware-iwl135_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino Wireless-N 135 firmware
+
+
+Package: iwlwifi-firmware-iwl2000
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c759343498b94d9164e70a8dfe07e07d
+Size: 339466
+Filename: iwlwifi-firmware-iwl2000_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino Wireless-N 2200 firmware
+
+
+Package: iwlwifi-firmware-iwl2030
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 37066b53240f5167eec59d67dece505d
+Size: 348054
+Filename: iwlwifi-firmware-iwl2030_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino Wireless-N 2230 firmware
+
+
+Package: iwlwifi-firmware-iwl3160
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 427ce78c9c05d68602f6c92d5f0ec7d0
+Size: 466580
+Filename: iwlwifi-firmware-iwl3160_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 3160 firmware
+
+
+Package: iwlwifi-firmware-iwl3168
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 0d0d40fcc7e9ebf7acff8e26a7a4bf52
+Size: 452244
+Filename: iwlwifi-firmware-iwl3168_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 3168 firmware
+
+
+Package: iwlwifi-firmware-iwl5000
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 5edf2dda113476d8c6c4ede7c13a7f61
+Size: 177816
+Filename: iwlwifi-firmware-iwl5000_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 5100AGN 5300AGN and 5350AGN firmware
+
+
+Package: iwlwifi-firmware-iwl5150
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 799c7ca88bbbd6d473bbd85304b6e68a
+Size: 174872
+Filename: iwlwifi-firmware-iwl5150_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless Wi-Fi 5150AGN firmware
+
+
+Package: iwlwifi-firmware-iwl6000g2
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: a2559febc921f19e2e5a20d99b50f1b9
+Size: 213622
+Filename: iwlwifi-firmware-iwl6000g2_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino 6300 and 6200 firmware
+
+
+Package: iwlwifi-firmware-iwl6000g2a
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: ceca9855c9ab366bbbd9ee6b5b3d07aa
+Size: 324888
+Filename: iwlwifi-firmware-iwl6000g2a_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino 6205 firmware
+
+
+Package: iwlwifi-firmware-iwl6000g2b
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: debb64761ac88d48fe0a77962d81ecce
+Size: 328630
+Filename: iwlwifi-firmware-iwl6000g2b_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino 6230 1030 130 and 6235 firmware
+
+
+Package: iwlwifi-firmware-iwl6050
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: a144536dd23f7c49eed5c14159eb321e
+Size: 219958
+Filename: iwlwifi-firmware-iwl6050_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Centrino 6150 and 6250 firmware
+
+
+Package: iwlwifi-firmware-iwl7260
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 804509c81e6e9e904cd03ff086cffbaf
+Size: 493498
+Filename: iwlwifi-firmware-iwl7260_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 7260 firmware
+
+
+Package: iwlwifi-firmware-iwl7265
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 50a4c296953925f06bf5f663f7b0b138
+Size: 534996
+Filename: iwlwifi-firmware-iwl7265_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 7265 firmware
+
+
+Package: iwlwifi-firmware-iwl7265d
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: a3481bd2599d4b74cbd3624d2f596232
+Size: 463810
+Filename: iwlwifi-firmware-iwl7265d_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 7265D and 3165 firmware
+
+
+Package: iwlwifi-firmware-iwl8260c
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c07f92db50d7e88e5a363ea33114fdd8
+Size: 961082
+Filename: iwlwifi-firmware-iwl8260c_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 8260 and 4165 firmware
+
+
+Package: iwlwifi-firmware-iwl8265
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e3075048c02ae3696d9158c3965a9b85
+Size: 968086
+Filename: iwlwifi-firmware-iwl8265_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 8265 firmware
+
+
+Package: iwlwifi-firmware-iwl9000
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 4fc0766663bb02fb6c8b405a7fe31e63
+Size: 630996
+Filename: iwlwifi-firmware-iwl9000_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 9000 firmware
+
+
+Package: iwlwifi-firmware-iwl9260
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: f6fe8d0695eaa9d45d03006e04d41986
+Size: 625706
+Filename: iwlwifi-firmware-iwl9260_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Intel Wireless 9260 firmware
+
+
+Package: jansson4
+Version: 2.14-r3
+Depends: libc
+Provides: jansson
+Section: libs
+Architecture: x86_64
+MD5Sum: ff7d073485851154144f7119d50880b0
+Size: 23804
+Filename: jansson4_2.14-r3_x86_64.ipk
+Source: feeds/base/package/libs/jansson
+Description: Jansson is a C library for encoding, decoding and manipulating JSON data
+License: MIT
+
+
+Package: jq
+Version: 1.7.1-r1
+Depends: libc
+Section: utils
+Architecture: x86_64
+Maintainer: Marko Ratkaj <markoratkaj@gmail.com>
+MD5Sum: 719a9a36482137cc450d71ac8e817964
+Size: 132978
+Filename: jq_1.7.1-r1_x86_64.ipk
+Source: feeds/packages/utils/jq
+Description: Lightweight and flexible command-line JSON processor.
+License: MIT
+
+
+Package: jshn
+Version: 2025.07.23~49056d17-r1
+Depends: libc, libjson-c5, libubox20240329, libblobmsg-json20240329
+Section: utils
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3e52e05e206d359fd9df2d2d6b8d28d0
+Size: 7132
+Filename: jshn_2025.07.23~49056d17-r1_x86_64.ipk
+Source: feeds/base/package/libs/libubox
+Description: Library for parsing and generating JSON from shell scripts
+License: ISC
+
+
+Package: jsonfilter
+Version: 2025.04.18~8a86fb78-r1
+Depends: libc, libubox20240329, libjson-c5
+Section: base
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 92937390ab201e6c3688cfd77503bd31
+Size: 10386
+Filename: jsonfilter_2025.04.18~8a86fb78-r1_x86_64.ipk
+Source: feeds/base/package/utils/jsonfilter
+Description: OpenWrt JSON filter utility
+License: ISC
+
+
+Package: libblobmsg-json20240329
+Version: 2025.07.23~49056d17-r1
+Depends: libc, libjson-c5, libubox20240329
+Provides: libblobmsg-json
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: f892e2fb1d0517cfbef5a518cc892dbd
+Size: 4468
+Filename: libblobmsg-json20240329_2025.07.23~49056d17-r1_x86_64.ipk
+Source: feeds/base/package/libs/libubox
+Description: blobmsg <-> json conversion library
+License: ISC
+
+
+Package: libcron
+Version: 2023.11.14~41f238ce-r1
+Depends: libc, libstdcpp6
+Section: lib
+Architecture: x86_64
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: a7f03a0f3e9f510c69f1b65b16f75334
+Size: 77216
+Filename: libcron_2023.11.14~41f238ce-r1_x86_64.ipk
+Source: feeds/packages/libs/libcron
+Description: Libcron offers an easy to use API to add callbacks with corresponding
+License: MIT
+
+
+Package: libcurl4
+Version: 8.10.1-r1
+Depends: libc, libopenssl3, libpthread, libnghttp2-14, ca-bundle
+Provides: libcurl
+Section: libs
+Architecture: x86_64
+Maintainer: Aleksey Vasilenko <aleksey.vasilenko@gmail.com>
+MD5Sum: aca7e49845a258c9772d20b886ce8424
+Size: 227826
+Filename: libcurl4_8.10.1-r1_x86_64.ipk
+Source: feeds/packages/net/curl
+Description: A client-side URL transfer library
+License: MIT
+
+
+Package: libertas-sdio-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e50a93059e99f47111b9267254c7d5ad
+Size: 349302
+Filename: libertas-sdio-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Marvell 8385/8686/8688 SDIO firmware
+
+
+Package: libertas-spi-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: a6c72d4a37f3a9477276345e4fe9561b
+Size: 92996
+Filename: libertas-spi-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Marvell 8686 SPI firmware
+
+
+Package: libertas-usb-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 6793a0ce1a9f0736ce080982568d2515
+Size: 217332
+Filename: libertas-usb-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Marvell 8388/8682 USB firmware
+
+
+Package: libevent2-7
+Version: 2.1.12-r2
+Depends: libc
+Provides: libevent2
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 982a918133f2326cfd6337ea92ee5175
+Size: 107618
+Filename: libevent2-7_2.1.12-r2_x86_64.ipk
+Source: feeds/base/package/libs/libevent2
+Description: The libevent API provides a mechanism to execute a callback function
+License: BSD-3-Clause
+
+
+Package: libevent2-core7
+Version: 2.1.12-r2
+Depends: libc
+Provides: libevent2-core
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 7a78dec0e3672f1162dd034f87864baf
+Size: 63320
+Filename: libevent2-core7_2.1.12-r2_x86_64.ipk
+Source: feeds/base/package/libs/libevent2
+Description: The libevent API provides a mechanism to execute a callback function
+License: BSD-3-Clause
+
+
+Package: libevent2-extra7
+Version: 2.1.12-r2
+Depends: libc, libevent2-core7
+Provides: libevent2-extra
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 7a3a912327fee6a2c057ea16768fa3cc
+Size: 49858
+Filename: libevent2-extra7_2.1.12-r2_x86_64.ipk
+Source: feeds/base/package/libs/libevent2
+Description: The libevent API provides a mechanism to execute a callback function
+License: BSD-3-Clause
+
+
+Package: libevent2-openssl7
+Version: 2.1.12-r2
+Depends: libc, libopenssl3, libevent2-core7
+Provides: libevent2-openssl
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: b55c29af03ed413ceba22eb00a56ad07
+Size: 9268
+Filename: libevent2-openssl7_2.1.12-r2_x86_64.ipk
+Source: feeds/base/package/libs/libevent2
+Description: The libevent API provides a mechanism to execute a callback function
+License: BSD-3-Clause
+
+
+Package: libevent2-pthreads7
+Version: 2.1.12-r2
+Depends: libc, libpthread, libevent2-core7
+Provides: libevent2-pthreads
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 3472f4e3a793716e92a6b04311a760ef
+Size: 3008
+Filename: libevent2-pthreads7_2.1.12-r2_x86_64.ipk
+Source: feeds/base/package/libs/libevent2
+Description: The libevent API provides a mechanism to execute a callback function
+License: BSD-3-Clause
+
+
+Package: libiwinfo-data
+Version: 2024.10.20~b94f066e-r1
+Depends: libc
+Section: opt
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: d95425fa65c53edef6da08c3e130f0cc
+Size: 3934
+Filename: libiwinfo-data_2024.10.20~b94f066e-r1_x86_64.ipk
+Source: feeds/base/package/network/utils/iwinfo
+Description: libiwinfo Lua binding
+License: GPL-2.0
+
+
+Package: libiwinfo-lua
+Version: 2024.10.20~b94f066e-r1
+Depends: libc, libiwinfo20230701, liblua5.1.5
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 9359bd4b602209d8890f06da4c8d5f8e
+Size: 7290
+Filename: libiwinfo-lua_2024.10.20~b94f066e-r1_x86_64.ipk
+Source: feeds/base/package/network/utils/iwinfo
+Description: This is the Lua binding for the iwinfo library. It provides access to all enabled
+License: GPL-2.0
+
+
+Package: libiwinfo20230701
+Version: 2024.10.20~b94f066e-r1
+Depends: libc, libnl-tiny1, libuci20250120, libubus20250102, libiwinfo-data
+Provides: libiwinfo
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: f10aa9511be23f6fb2f615c677ef0229
+Size: 27194
+Filename: libiwinfo20230701_2024.10.20~b94f066e-r1_x86_64.ipk
+Source: feeds/base/package/network/utils/iwinfo
+Description: Wireless information library with simplified API for nl80211
+License: GPL-2.0
+
+
+Package: libjson-c5
+Version: 0.18-r1
+Depends: libc
+Provides: libjson-c
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: f4329a04a95b245d487d8f7a89ea9b97
+Size: 30416
+Filename: libjson-c5_0.18-r1_x86_64.ipk
+Source: feeds/base/package/libs/libjson-c
+Description: This package contains a library for javascript object notation backends.
+License: MIT
+
+
+Package: libjson-script20240329
+Version: 2025.07.23~49056d17-r1
+Depends: libc, libubox20240329
+Provides: libjson-script
+Section: utils
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: d5ec768dd02b5a4d1f3711511644c3c3
+Size: 5952
+Filename: libjson-script20240329_2025.07.23~49056d17-r1_x86_64.ipk
+Source: feeds/base/package/libs/libubox
+Description: Minimalistic JSON based scripting engine
+License: ISC
+
+
+Package: libltdl7
+Version: 2.4.7-r1
+Depends: libc
+Provides: libltdl
+Section: libs
+Architecture: x86_64
+MD5Sum: 2f3da52381f9556649e5160b2d99a1e0
+Size: 15476
+Filename: libltdl7_2.4.7-r1_x86_64.ipk
+Source: feeds/base/package/libs/libtool
+Description: A generic dynamic object loading library
+License: GPL-2.0+
+
+
+Package: liblua5.1.5
+Version: 5.1.5-r11
+Depends: libc
+Provides: liblua
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: ac0001e33cc05a2551c904ed58aa0ed1
+Size: 74338
+Filename: liblua5.1.5_5.1.5-r11_x86_64.ipk
+Source: feeds/base/package/utils/lua
+Description: Lua is a powerful light-weight programming language designed for extending
+License: MIT
+
+
+Package: liblucihttp-lua
+Version: 2023.03.15~9b5b683f-r1
+Depends: libc, liblucihttp0, liblua5.1.5
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 6a7381f3a6d73b5a4521aa1c7f6f5c7b
+Size: 4328
+Filename: liblucihttp-lua_2023.03.15~9b5b683f-r1_x86_64.ipk
+Source: feeds/luci/contrib/package/lucihttp
+Description: Lua binding for the LuCI HTTP utility library
+License: ISC
+
+
+Package: liblucihttp-ucode
+Version: 2023.03.15~9b5b683f-r1
+Depends: libc, liblucihttp0, libucode20230711
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: b611ba7916de2adf3b271ca2da159bde
+Size: 4804
+Filename: liblucihttp-ucode_2023.03.15~9b5b683f-r1_x86_64.ipk
+Source: feeds/luci/contrib/package/lucihttp
+Description: ucode binding for the LuCI HTTP utility library
+License: ISC
+
+
+Package: liblucihttp0
+Version: 2023.03.15~9b5b683f-r1
+Depends: libc
+Provides: liblucihttp
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: d72ba98d25e9e2e1b6125727a0c3b7d6
+Size: 8568
+Filename: liblucihttp0_2023.03.15~9b5b683f-r1_x86_64.ipk
+Source: feeds/luci/contrib/package/lucihttp
+Description: LuCI HTTP utility library
+License: ISC
+
+
+Package: libmbedtls21
+Version: 3.6.5-r1
+Depends: libc
+Provides: libmbedtls
+Section: libs
+Architecture: x86_64
+MD5Sum: f5fa9ea5935498af0ddad5482cceae2e
+Size: 311916
+Filename: libmbedtls21_3.6.5-r1_x86_64.ipk
+Source: feeds/base/package/libs/mbedtls
+Description: The aim of the mbedtls project is to provide a quality, open-source
+License: GPL-2.0-or-later
+
+
+Package: libmnl0
+Version: 1.0.5-r1
+Depends: libc
+Provides: libmnl
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: b5c1458b1e57773a507bc90fb1254ed5
+Size: 8232
+Filename: libmnl0_1.0.5-r1_x86_64.ipk
+Source: feeds/base/package/libs/libmnl
+Description: libmnl is a minimalistic user-space library oriented to Netlink developers.
+License: LGPL-2.1+
+
+
+Package: libncurses-dev
+Version: 6.4-r2
+Depends: libc, zlib
+Section: devel
+Architecture: x86_64
+MD5Sum: 7ff4eb25161ef37c651b78326e0b57ea
+Size: 270666
+Filename: libncurses-dev_6.4-r2_x86_64.ipk
+Source: feeds/base/package/libs/ncurses
+Description: Development files for the ncurses library
+License: MIT
+
+
+Package: libncurses6
+Version: 6.4-r2
+Depends: libc, terminfo
+Provides: libncursesw, libncurses, libncursesw6
+Section: libs
+Architecture: x86_64
+MD5Sum: eb5747e698faf13604b2c107f364eb06
+Size: 182434
+Filename: libncurses6_6.4-r2_x86_64.ipk
+Source: feeds/base/package/libs/ncurses
+Description: Terminal handling library (Unicode)
+License: MIT
+
+
+Package: libnetfilter-conntrack3
+Version: 1.0.9-r2
+Depends: libc, libnfnetlink0, kmod-nf-conntrack-netlink, libmnl0
+Provides: libnetfilter-conntrack
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 0fb4e11cb79dc00dc8ca513b385d7913
+Size: 40610
+Filename: libnetfilter-conntrack3_1.0.9-r2_x86_64.ipk
+Source: feeds/base/package/libs/libnetfilter-conntrack
+Description: libnetfilter_conntrack is a userspace library providing a programming
+License: GPL-2.0-or-later
+
+
+Package: libnetfilter-cthelper0
+Version: 1.0.0-r2
+Depends: libc, libmnl0
+Provides: libnetfilter-cthelper
+Section: libs
+Architecture: x86_64
+MD5Sum: 517a6bfbf8fff761822f719bd3a170ba
+Size: 5040
+Filename: libnetfilter-cthelper0_1.0.0-r2_x86_64.ipk
+Source: feeds/packages/libs/libnetfilter-cthelper
+Description: libnetfilter_cthelper is a userspace library providing a programming
+License: GPL-2.0+
+
+
+Package: libnetfilter-cttimeout1
+Version: 1.0.0-r2
+Depends: libc, libmnl0
+Provides: libnetfilter-cttimeout
+Section: libs
+Architecture: x86_64
+MD5Sum: 4fe8bd093062597cf957831545d23775
+Size: 5090
+Filename: libnetfilter-cttimeout1_1.0.0-r2_x86_64.ipk
+Source: feeds/packages/libs/libnetfilter-cttimeout
+Description: libnetfilter_cttimeout is a userspace library providing a programming
+License: GPL-2.0+
+
+
+Package: libnetfilter-queue1
+Version: 1.0.5-r4
+Depends: libc, libmnl0, libnfnetlink0
+Provides: libnetfilter-queue
+Section: libs
+Architecture: x86_64
+MD5Sum: 7995f6d0fb965851553ac1b089f2789a
+Size: 11386
+Filename: libnetfilter-queue1_1.0.5-r4_x86_64.ipk
+Source: feeds/packages/libs/libnetfilter-queue
+Description: libnetfilter_queue is a userspace library providing a programming
+License: GPL-2.0-or-later
+
+
+Package: libnfnetlink0
+Version: 1.0.2-r1
+Depends: libc
+Provides: libnfnetlink
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 62669a792764f8071ffcf55b8b775281
+Size: 11382
+Filename: libnfnetlink0_1.0.2-r1_x86_64.ipk
+Source: feeds/base/package/libs/libnfnetlink
+Description: libnfnetlink is is the low-level library for netfilter related kernel/userspace communication.
+License: GPL-2.0+
+
+
+Package: libnftnl11
+Version: 1.2.8-r1
+Depends: libc, libmnl0
+Provides: libnftnl
+Section: libs
+Architecture: x86_64
+Maintainer: Steven Barth <steven@midlink.org>
+MD5Sum: 567395541fc3bd92ef2a335848631717
+Size: 64978
+Filename: libnftnl11_1.2.8-r1_x86_64.ipk
+Source: feeds/base/package/libs/libnftnl
+Description: libnftnl is a userspace library providing a low-level netlink
+License: GPL-2.0-or-later
+
+
+Package: libnghttp2-14
+Version: 1.63.0-r1
+Depends: libc
+Provides: libnghttp2
+Section: libs
+Architecture: x86_64
+Maintainer: Hans Dedecker <dedeckeh@gmail.com>
+MD5Sum: 64ec83fe9651e60a883bc4999e54ba31
+Size: 72312
+Filename: libnghttp2-14_1.63.0-r1_x86_64.ipk
+Source: feeds/packages/libs/nghttp2
+Description: C library implementing the framing layer of the HTTP/2 protocol. It can be used to build a HTTP/2-capable HTTP client or server
+License: MIT
+
+
+Package: libnl-tiny1
+Version: 2025.03.19~c0df580a-r1
+Depends: libc
+Provides: libnl-tiny
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 737b1495f57675fc806c55379dbf20be
+Size: 16234
+Filename: libnl-tiny1_2025.03.19~c0df580a-r1_x86_64.ipk
+Source: feeds/base/package/libs/libnl-tiny
+Description: This package contains a stripped down version of libnl
+License: LGPL-2.1
+
+
+Package: libopenssl-afalg
+Version: 3.0.19-r1
+Depends: libc, libopenssl3, libopenssl-conf, kmod-crypto-user
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 763df9e4574decf5d567e080b78731d3
+Size: 7924
+Filename: libopenssl-afalg_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: This package adds an engine that enables hardware acceleration
+License: Apache-2.0
+
+
+Package: libopenssl-conf
+Version: 3.0.19-r1
+Depends: libc, libopenssl3
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 5cdd3c3c1e432f08510320c314932643
+Size: 6448
+Filename: libopenssl-conf_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: The OpenSSL Project is a collaborative effort to develop a robust,
+License: Apache-2.0
+
+
+Package: libopenssl-devcrypto
+Version: 3.0.19-r1
+Depends: libc, libopenssl3, libopenssl-conf, kmod-cryptodev
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 579919cd70bcb7cea056a3672587bdff
+Size: 12472
+Filename: libopenssl-devcrypto_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: This package adds an engine that enables hardware acceleration
+License: Apache-2.0
+
+
+Package: libopenssl-legacy
+Version: 3.0.19-r1
+Depends: libc, libopenssl3, libopenssl-conf
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 27a36c5ed753d8721148ba9e00050af6
+Size: 38756
+Filename: libopenssl-legacy_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: The OpenSSL legacy provider supplies OpenSSL implementations of algorithms that
+License: Apache-2.0
+
+
+Package: libopenssl-padlock
+Version: 3.0.19-r1
+Depends: libc, libopenssl3, libopenssl-conf, kmod-crypto-hw-padlock
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: b863c5b20d295ca22b21b53ec66bbdf0
+Size: 11322
+Filename: libopenssl-padlock_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: This package adds an engine that enables VIA Padlock hardware acceleration.
+License: Apache-2.0
+
+
+Package: libopenssl3
+Version: 3.0.19-r1
+Depends: libc
+Provides: libopenssl
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 6e9ed729511aa7c9d4efc2dc74871e95
+Size: 2110336
+Filename: libopenssl3_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: The OpenSSL Project is a collaborative effort to develop a robust,
+License: Apache-2.0
+
+
+Package: libpcre2-16
+Version: 10.42-r1
+Depends: libc
+Section: libs
+Architecture: x86_64
+Maintainer: Shane Peelar <lookatyouhacker@gmail.com>
+MD5Sum: 2ebe150f675dfd127444df3c64519fcf
+Size: 172296
+Filename: libpcre2-16_10.42-r1_x86_64.ipk
+Source: feeds/base/package/libs/pcre2
+Description: A Perl Compatible Regular Expression library (16bit support)
+License: BSD-3-Clause
+
+
+Package: libpcre2-32
+Version: 10.42-r1
+Depends: libc
+Section: libs
+Architecture: x86_64
+Maintainer: Shane Peelar <lookatyouhacker@gmail.com>
+MD5Sum: 6c5d5e218980b4cce79d2410ad563ee4
+Size: 162756
+Filename: libpcre2-32_10.42-r1_x86_64.ipk
+Source: feeds/base/package/libs/pcre2
+Description: A Perl Compatible Regular Expression library (32bit support)
+License: BSD-3-Clause
+
+
+Package: libpcre2
+Version: 10.42-r1
+Depends: libc
+Section: libs
+Architecture: x86_64
+Maintainer: Shane Peelar <lookatyouhacker@gmail.com>
+MD5Sum: d394aa865f9932426561395eb4de4927
+Size: 188602
+Filename: libpcre2_10.42-r1_x86_64.ipk
+Source: feeds/base/package/libs/pcre2
+Description: A Perl Compatible Regular Expression library
+License: BSD-3-Clause
+
+
+Package: libquickjs
+Version: 2023.12.21~0c00c488-r1
+Depends: libc, libatomic1
+Section: lib
+Architecture: x86_64
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: 0976b0b55a023aaee482fe98c3159a8a
+Size: 345104
+Filename: libquickjs_2023.12.21~0c00c488-r1_x86_64.ipk
+Source: feeds/packages/libs/quickjspp
+Description: QuickJS is a small and embeddable Javascript engine. It supports the
+
+
+Package: libreadline8
+Version: 8.2-r2
+Depends: libc, libncursesw6
+Provides: libreadline
+Section: libs
+Architecture: x86_64
+MD5Sum: f6da543236b70702c17c8db262a7415e
+Size: 137088
+Filename: libreadline8_8.2-r2_x86_64.ipk
+Source: feeds/base/package/libs/readline
+Description: The Readline library provides a set of functions for use by applications
+License: GPL-3.0-or-later
+
+
+Package: libtirpc
+Version: 1.3.4-r1
+Depends: libc, libpthread
+Section: libs
+Architecture: x86_64
+MD5Sum: 97bbb4c7e751898467429d5e8b6adea4
+Size: 64148
+Filename: libtirpc_1.3.4-r1_x86_64.ipk
+Source: feeds/packages/libs/libtirpc
+Description: Library TI RPC for RPC bindings
+License: BSD-3-Clause
+
+
+Package: libubox-lua
+Version: 2025.07.23~49056d17-r1
+Depends: libc, libubox20240329, liblua5.1.5
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 37c53fc7cbb87a842c06d4c34fc821be
+Size: 6368
+Filename: libubox-lua_2025.07.23~49056d17-r1_x86_64.ipk
+Source: feeds/base/package/libs/libubox
+Description: Lua binding for the OpenWrt Basic utility library
+License: ISC
+
+
+Package: libubox20240329
+Version: 2025.07.23~49056d17-r1
+Depends: libc
+Provides: libubox
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 56fd3c0f50ed440f282ea8cc32386dba
+Size: 28982
+Filename: libubox20240329_2025.07.23~49056d17-r1_x86_64.ipk
+Source: feeds/base/package/libs/libubox
+Description: Basic utility library
+License: ISC
+
+
+Package: libubus-lua
+Version: 2025.10.17~60e04048-r1
+Depends: libc, libubus20250102, liblua5.1.5
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 51872856546dbe50e2a81ffd215cb395
+Size: 7834
+Filename: libubus-lua_2025.10.17~60e04048-r1_x86_64.ipk
+Source: feeds/base/package/system/ubus
+Description: Lua binding for the OpenWrt RPC client
+License: LGPL-2.1
+
+
+Package: libubus20250102
+Version: 2025.10.17~60e04048-r1
+Depends: libc, libubox20240329
+Provides: libubus
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 786f8d560f1dd08f928aad88ebca07eb
+Size: 12406
+Filename: libubus20250102_2025.10.17~60e04048-r1_x86_64.ipk
+Source: feeds/base/package/system/ubus
+Description: OpenWrt RPC client library
+License: LGPL-2.1
+
+
+Package: libuci-lua
+Version: 2025.01.20~16ff0bad-r1
+Depends: libc, libuci20250120, liblua5.1.5
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: f45838104301e0cfdd4f4dbb5c9b739c
+Size: 7754
+Filename: libuci-lua_2025.01.20~16ff0bad-r1_x86_64.ipk
+Source: feeds/base/package/system/uci
+Description: Lua plugin for UCI
+License: LGPL-2.1
+
+
+Package: libuci20250120
+Version: 2025.01.20~16ff0bad-r1
+Depends: libc, libubox20240329
+Provides: libuci
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 225fadd6069bbcd1cb6c70d5baba1e2f
+Size: 18276
+Filename: libuci20250120_2025.01.20~16ff0bad-r1_x86_64.ipk
+Source: feeds/base/package/system/uci
+Description: C library for the Unified Configuration Interface (UCI)
+License: LGPL-2.1
+
+
+Package: libuclient20201210
+Version: 2024.10.22~88ae8f20-r1
+Depends: libc, libubox20240329
+Provides: libuclient
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 62925f5e246de2a439e34d041bab2f3f
+Size: 11550
+Filename: libuclient20201210_2024.10.22~88ae8f20-r1_x86_64.ipk
+Source: feeds/base/package/libs/uclient
+Description: HTTP/1.1 client library
+License: ISC
+
+
+Package: libucode20230711
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, libjson-c5
+Provides: libucode
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: b444b6e00015f023abab469c773c69f4
+Size: 77958
+Filename: libucode20230711_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The libucode package provides the shared runtime library for the ucode interpreter.
+License: ISC
+
+
+Package: libustream-mbedtls20201210
+Version: 2024.07.28~99bd3d2b-r1
+Depends: libc, libubox20240329, libmbedtls21
+Provides: libustream-mbedtls
+Conflicts: libustream-openssl, libustream-wolfssl
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 00d391d633da256279f1775ddb8edac4
+Size: 6392
+Filename: libustream-mbedtls20201210_2024.07.28~99bd3d2b-r1_x86_64.ipk
+Source: feeds/base/package/libs/ustream-ssl
+Description: ustream SSL Library (mbedtls)
+License: ISC
+
+
+Package: libustream-openssl20201210
+Version: 2024.07.28~99bd3d2b-r1
+Depends: libc, libubox20240329, libopenssl3
+Provides: libustream-openssl
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 7cbde4a63f3b538d3105a8a8f2a79111
+Size: 6092
+Filename: libustream-openssl20201210_2024.07.28~99bd3d2b-r1_x86_64.ipk
+Source: feeds/base/package/libs/ustream-ssl
+Description: ustream SSL Library (openssl)
+License: ISC
+
+
+Package: libustream-wolfssl20201210
+Version: 2024.07.28~99bd3d2b-r1
+Depends: libc, libubox20240329, libwolfssl5.7.6.e624513f
+Provides: libustream-wolfssl
+Conflicts: libustream-openssl
+Section: libs
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 023059bd477976f7a3a3273dd1bb5dc9
+Size: 5164
+Filename: libustream-wolfssl20201210_2024.07.28~99bd3d2b-r1_x86_64.ipk
+Source: feeds/base/package/libs/ustream-ssl
+Description: ustream SSL Library (wolfssl)
+License: ISC
+
+
+Package: libwolfssl-benchmark
+Version: 5.7.6-r1
+Depends: libc, libwolfssl5.7.6.e624513f
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 56ee6b4975a861638d7b183a7cf8a106
+Size: 20602
+Filename: libwolfssl-benchmark_5.7.6-r1_x86_64.ipk
+Source: feeds/base/package/libs/wolfssl
+Description: This is the wolfssl benchmark utility.
+License: GPL-2.0-or-later
+
+
+Package: libwolfssl5.7.6.e624513f
+Version: 5.7.6-r1
+Depends: libc
+Provides: libcyassl, libwolfssl, libcyassl5.7.6.e624513f
+Conflicts: libwolfsslcpu-crypto
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: c1ea50966325d9ac48d0bd3357117b6b
+Size: 578878
+Filename: libwolfssl5.7.6.e624513f_5.7.6-r1_x86_64.ipk
+Source: feeds/base/package/libs/wolfssl
+Description: wolfSSL (formerly CyaSSL) is an SSL library optimized for small
+License: GPL-2.0-or-later
+
+
+Package: libwolfsslcpu-crypto5.7.6.e624513f
+Version: 5.7.6-r1
+Depends: libc
+Provides: libwolfssl, libcyassl, libwolfsslcpu-crypto, libwolfssl5.7.6.e624513f, libcyassl5.7.6.e624513f
+Section: libs
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 05101698cd696d402b39f2e2bbe06f32
+Size: 625610
+Filename: libwolfsslcpu-crypto5.7.6.e624513f_5.7.6-r1_x86_64.ipk
+Source: feeds/base/package/libs/wolfssl
+Description: wolfSSL (formerly CyaSSL) is an SSL library optimized for small
+License: GPL-2.0-or-later
+
+
+Package: libyaml-cpp0.7
+Version: 0.7.0-r1
+Depends: libc, libstdcpp6
+Provides: libyaml-cpp
+Section: development
+Architecture: x86_64
+Maintainer: Steven Hessing <steven.hessing@gmail.com>
+MD5Sum: c961e325b935772b1923746e4fd46fcd
+Size: 93472
+Filename: libyaml-cpp0.7_0.7.0-r1_x86_64.ipk
+Source: feeds/packages/libs/libyaml-cpp
+Description: yaml-cpp is a YAML parser and emitter in C++ matching the YAML 1.2 spec.
+License: MIT
+
+
+Package: lua-examples
+Version: 5.1.5-r11
+Depends: libc, lua
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 7b46246b39d7478a61041b6bf0caa444
+Size: 6164
+Filename: lua-examples_5.1.5-r11_x86_64.ipk
+Source: feeds/base/package/utils/lua
+Description: Lua is a powerful light-weight programming language designed for extending
+License: MIT
+
+
+Package: lua
+Version: 5.1.5-r11
+Depends: libc, liblua5.1.5
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: e2dd1c4a40f9ab220483943e7dc4b5db
+Size: 5386
+Filename: lua_5.1.5-r11_x86_64.ipk
+Source: feeds/base/package/utils/lua
+Description: Lua is a powerful light-weight programming language designed for extending
+License: MIT
+
+
+Package: luac
+Version: 5.1.5-r11
+Depends: libc, liblua5.1.5
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 16b745d09558d5554d642683052ca21b
+Size: 6022
+Filename: luac_5.1.5-r11_x86_64.ipk
+Source: feeds/base/package/utils/lua
+Description: Lua is a powerful light-weight programming language designed for extending
+License: MIT
+
+
+Package: luci-app-airconnect
+Version: 1.0.2-r1
+Depends: libc, airconnect
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 291b1488f735d34ae454e80f6f772c85
+Size: 2588
+Filename: luci-app-airconnect_1.0.2-r1_all.ipk
+Source: feeds/base/waynesg/luci-app-airconnect/luci-app-airconnect
+Description: LuCI support for AirConnect
+
+
+Package: luci-app-argon-config
+Version: 23.242.21706~b1951a5
+Depends: libc, luci-theme-argon
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 91a51a71c2355d845b3f955c079e3adb
+Size: 3944
+Filename: luci-app-argon-config_23.242.21706~b1951a5_all.ipk
+Source: feeds/luci/applications/luci-app-argon-config
+Description: LuCI for Argon theme configuration
+
+
+Package: luci-app-aurora-config
+Version: 0.3.0-r20260208
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 08dd26ec5e80742bea9c8a88243c6398
+Size: 49032
+Filename: luci-app-aurora-config_0.3.0-r20260208_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: LuCI configuration app for luci-theme-aurora
+License: Apache-2.0
+
+
+Package: luci-app-autoupdate
+Version: 2-r20260302
+Depends: libc, curl, wget, bash, luci-lua-runtime
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 689ecbb1a3cdb1bc6c08011fc93b804c
+Size: 5580
+Filename: luci-app-autoupdate_2-r20260302_all.ipk
+Source: feeds/base/waynesg/luci-app-autoupdate
+Description: LuCI Support for AutoBuild Firmware/AutoUpdate.sh
+
+
+Package: luci-app-mosdns
+Version: 1.6.17-r1
+Depends: libc, mosdns, jsonfilter, curl, v2ray-geoip, v2ray-geosite, v2dat
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 6e9381b1ac5e380bed6368e6bb304871
+Size: 103700
+Filename: luci-app-mosdns_1.6.17-r1_all.ipk
+Source: feeds/base/waynesg/luci-app-mosdns/luci-app-mosdns
+Description: LuCI Support for mosdns
+
+
+Package: luci-app-onliner
+Version: 1.2-r1
+Depends: libc, luci-lua-runtime
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 5ea7a06404294d6a0ed47d028f602ef4
+Size: 8844
+Filename: luci-app-onliner_1.2-r1_all.ipk
+Source: feeds/base/waynesg/AutoBuild-Packages/luci-app-onliner
+Description: LuCI support arp online
+
+
+Package: luci-app-subconverter
+Version: 1.0.0-r1
+Depends: libc, subconverter, sub-web, luci-base
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: ed2ded3feb4a565a9ed881ef758b9f03
+Size: 4034
+Filename: luci-app-subconverter_1.0.0-r1_all.ipk
+Source: feeds/base/waynesg/luci-app-subconverter/luci-app-subconverter
+Description: LuCI support for subconverter
+
+
+Package: luci-app-tailscale
+Version: 1.2.6-r1
+Depends: libc, tailscale
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: 8d652f0ccddd58948840c30d1b1a7b99
+Size: 7840
+Filename: luci-app-tailscale_1.2.6-r1_all.ipk
+Source: feeds/base/waynesg/luci-app-tailscale
+Description: LuCI for Tailscale
+
+
+Package: luci-app-timecontrol
+Version: 3.2.1-r20251227
+Depends: libc, bc, nftables, bash, conntrack
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: fae19a78d8aaa15c64dfa98f8998d09b
+Size: 12518
+Filename: luci-app-timecontrol_3.2.1-r20251227_all.ipk
+Source: feeds/base/waynesg/luci-app-timecontrol/luci-app-timecontrol
+Description: LuCI support for Easy timecontrol for nftables(Internet time control).
+License: Apache-2.0
+
+
+Package: luci-app-wechatpush
+Version: 3.5.6-r1
+Depends: libc, iputils-arping, curl, jq, bash
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: bbb4251710b74a0df8c7b7c7c3b40691
+Size: 73506
+Filename: luci-app-wechatpush_3.5.6-r1_all.ipk
+Source: feeds/luci/applications/luci-app-wechatpush
+Description: LuCI support for wechatpush
+
+
+Package: luci-base
+Version: 25.017.24510~d42ec55
+Depends: libc, rpcd, rpcd-mod-file, rpcd-mod-luci, rpcd-mod-ucode, cgi-io, ucode, ucode-mod-fs, ucode-mod-uci, ucode-mod-ubus, ucode-mod-math, ucode-mod-html, liblucihttp-ucode
+Section: luci
+Architecture: x86_64
+Maintainer: OpenWrt LuCI community
+MD5Sum: 2cc77a5564b91658c82ccbda35cb448a
+Size: 129072
+Filename: luci-base_25.017.24510~d42ec55_x86_64.ipk
+Source: feeds/luci/modules/luci-base
+Description: LuCI core runtime
+License: Apache-2.0
+
+
+Package: luci-i18n-airconnect-zh-cn
+Version: 25.325.40207~b292524
+Depends: libc, luci-app-airconnect
+Section: luci
+Architecture: all
+Maintainer: sbwml <admin@cooluc.com>
+MD5Sum: f90d4134a97a964d0f33dcffc3edde56
+Size: 1406
+Filename: luci-i18n-airconnect-zh-cn_25.325.40207~b292524_all.ipk
+Source: feeds/base/waynesg/luci-app-airconnect/luci-app-airconnect
+Description: Translation for luci-app-airconnect - 简体中文 (Chinese Simplified)
+
+
+Package: luci-i18n-argon-config-zh-cn
+Version: 23.158.32296~95d66e9
+Depends: libc, luci-app-argon-config
+Section: luci
+Architecture: all
+MD5Sum: f4bcb651c5e7f381dc61a129fdf413bc
+Size: 2178
+Filename: luci-i18n-argon-config-zh-cn_23.158.32296~95d66e9_all.ipk
+Source: feeds/luci/applications/luci-app-argon-config
+Description: Translation for luci-app-argon-config - 简体中文 (Chinese Simplified)
+
+
+Package: luci-i18n-aurora-config-de
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 836bc7bd18bf7782abb8a86b7a35dd02
+Size: 5458
+Filename: luci-i18n-aurora-config-de_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Deutsch (German)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-es
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 29d4503a7d32a4f51260c5299ae4791c
+Size: 5436
+Filename: luci-i18n-aurora-config-es_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Español (Spanish)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-fr
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: f05834ae247a5179f0dfdefd47a97603
+Size: 5530
+Filename: luci-i18n-aurora-config-fr_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Français (French)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-it
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 6fd17b560436ceacde07eba0413cbaaa
+Size: 5300
+Filename: luci-i18n-aurora-config-it_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Italiano (Italian)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-ja
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 4882879678f916e8d554171c5e846f79
+Size: 5658
+Filename: luci-i18n-aurora-config-ja_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - 日本語 (Japanese)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-ko
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: a053d04919fb9a0769c2b21252280936
+Size: 5478
+Filename: luci-i18n-aurora-config-ko_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - 한국어 (Korean)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-nl
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: ccbc6f5bcd2bf6b2d88f2dcc9f3c3e84
+Size: 5360
+Filename: luci-i18n-aurora-config-nl_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Nederlands (Dutch)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-pl
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: d940a78d48c5cd77f810eb90edac2a9a
+Size: 5560
+Filename: luci-i18n-aurora-config-pl_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Polski (Polish)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-ru
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 912cab9a8d1770e5432475c2cf3fa133
+Size: 6054
+Filename: luci-i18n-aurora-config-ru_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Русский (Russian)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-tr
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 2a2f72e659cfd1efa051691cce225885
+Size: 5544
+Filename: luci-i18n-aurora-config-tr_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Türkçe (Turkish)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-uk
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: edd9db511f49d1736502e165fcf756d9
+Size: 6082
+Filename: luci-i18n-aurora-config-uk_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Українська (Ukrainian)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-vi
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 7d9da2af9c18e1aad4261cd3c40e69fc
+Size: 5462
+Filename: luci-i18n-aurora-config-vi_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - Tiếng Việt (Vietnamese)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-zh-cn
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 0a97f9b4ca31b841dd69bd3e909a1194
+Size: 5216
+Filename: luci-i18n-aurora-config-zh-cn_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - 简体中文 (Chinese Simplified)
+License: Apache-2.0
+
+
+Package: luci-i18n-aurora-config-zh-tw
+Version: 26.053.59050~3b15aa3
+Depends: libc, luci-app-aurora-config
+Section: luci
+Architecture: all
+MD5Sum: 3bc69762100c98174ec931f1ab4ef64c
+Size: 5218
+Filename: luci-i18n-aurora-config-zh-tw_26.053.59050~3b15aa3_all.ipk
+Source: feeds/base/waynesg/luci-app-aurora-config
+Description: Translation for luci-app-aurora-config - 繁體中文 (Chinese Traditional)
+License: Apache-2.0
+
+
+Package: luci-i18n-autoupdate-zh-cn
+Version: 26.061.53737~5f073fa
+Depends: libc, luci-app-autoupdate
+Section: luci
+Architecture: all
+MD5Sum: b6b205aae4a7438127330c2e535a8959
+Size: 1490
+Filename: luci-i18n-autoupdate-zh-cn_26.061.53737~5f073fa_all.ipk
+Source: feeds/base/waynesg/luci-app-autoupdate
+Description: Translation for luci-app-autoupdate - 简体中文 (Chinese Simplified)
+
+
+Package: luci-i18n-base-ar
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 9ec2566ab9731fa965b836354d6fc13a
+Size: 60022
+Filename: luci-i18n-base-ar_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - العربية (Arabic)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-bg
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 4c3212f73af571d22e68b3795c53eeb5
+Size: 10070
+Filename: luci-i18n-base-bg_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - български (Bulgarian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-bn
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: e3e17992d73534b4b7d906bf8fe9fd2e
+Size: 2600
+Filename: luci-i18n-base-bn_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - বাংলা (Bengali)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-ca
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: e75a7d790df57d5cb73150a0a44fb931
+Size: 19400
+Filename: luci-i18n-base-ca_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Català (Catalan)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-cs
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 64ed41a6ba162893f598fc88ea1aa3a7
+Size: 32578
+Filename: luci-i18n-base-cs_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Čeština (Czech)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-da
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: bf116bb303a206d45c0c57212d5a0878
+Size: 47516
+Filename: luci-i18n-base-da_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Dansk (Danish)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-de
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 9a8176fb6166ef7ae0918d208bbadf2c
+Size: 58172
+Filename: luci-i18n-base-de_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Deutsch (German)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-el
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: f430cc7c07554556e34165c04f951fcf
+Size: 16144
+Filename: luci-i18n-base-el_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Ελληνικά (Greek)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-es
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 3cf427bd69e3c9b21fc20e838d82adcf
+Size: 61272
+Filename: luci-i18n-base-es_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Español (Spanish)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-fa
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 5a4a76776ac6cd98d348ec5a12f305a3
+Size: 5044
+Filename: luci-i18n-base-fa_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Farsi (Persian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-fi
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: a3ee0d8b82e2f6edd8b69655ac7f5e81
+Size: 35224
+Filename: luci-i18n-base-fi_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Suomi (Finnish)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-fil
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 3c4bf618bda81830b236be71095f9857
+Size: 6438
+Filename: luci-i18n-base-fil_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Filipino (Philippinic)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-fr
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: f0fc08999db1536fda3b190db5d025b1
+Size: 49954
+Filename: luci-i18n-base-fr_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Français (French)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-he
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 33b4e7c2df17955107ca1df3d45ab096
+Size: 6186
+Filename: luci-i18n-base-he_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - עִבְרִית (Hebrew)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-hi
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 6d4739c50cbab08db2b60d4507fdce00
+Size: 3162
+Filename: luci-i18n-base-hi_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - हिंदी (Hindi)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-hu
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 5f9b6ec01f968bf899ef22ad7890fbf9
+Size: 57378
+Filename: luci-i18n-base-hu_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Magyar (Hungarian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-it
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: a03106315425395921eb7af21c340ab8
+Size: 54454
+Filename: luci-i18n-base-it_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Italiano (Italian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-ja
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 3972eef61fb827444e4eb5f54d6a0734
+Size: 37824
+Filename: luci-i18n-base-ja_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - 日本語 (Japanese)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-ko
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 449a1dd91dd828629ce82fae0912f6d4
+Size: 19060
+Filename: luci-i18n-base-ko_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - 한국어 (Korean)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-lt
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 05d5b2e6c9535bc24b6d52ba547ef338
+Size: 65698
+Filename: luci-i18n-base-lt_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Lietuvių (Lithuanian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-mr
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 373a759bf46ada4d6cdc002c5b6d7dea
+Size: 2176
+Filename: luci-i18n-base-mr_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Marāṭhī (Marathi)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-ms
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: e689da748e0fed09f132cca85782b4df
+Size: 6366
+Filename: luci-i18n-base-ms_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Bahasa Melayu (Malay)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-nl
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: e0d6d30a72f47c086d8d34a0f2ce5180
+Size: 47186
+Filename: luci-i18n-base-nl_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Nederlands (Dutch)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-no
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: d435918300e58d3597d0aba6328dde21
+Size: 16988
+Filename: luci-i18n-base-no_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Norsk (Norwegian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-pl
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: fddb95dfffa8c607be5bb1afd276c843
+Size: 62386
+Filename: luci-i18n-base-pl_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Polski (Polish)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-pt-br
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 23de98d575978e8effc8720c0c88d630
+Size: 56160
+Filename: luci-i18n-base-pt-br_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Português do Brasil (Brazilian Portuguese)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-pt
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 26d2be244455f3cfd8fdded84855643d
+Size: 55482
+Filename: luci-i18n-base-pt_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Português (Portuguese)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-ro
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 3948337a5e0356bff3d9658d83564884
+Size: 50520
+Filename: luci-i18n-base-ro_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Română (Romanian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-ru
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: d013378d9498c5e0d3f965119e87a112
+Size: 69674
+Filename: luci-i18n-base-ru_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Русский (Russian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-sk
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: d0aa0f148b7395d84d196993cbbe7e75
+Size: 24288
+Filename: luci-i18n-base-sk_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Slovenčina (Slovak)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-sv
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 8e5fc61ef1eeae55931d8d4393533d8e
+Size: 14218
+Filename: luci-i18n-base-sv_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Svenska (Swedish)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-tr
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 174ce8bc47cea40977b5f301e1e50672
+Size: 55664
+Filename: luci-i18n-base-tr_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Türkçe (Turkish)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-uk
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 388f3b1a0b4c4aeace5cb28c48349779
+Size: 72086
+Filename: luci-i18n-base-uk_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Українська (Ukrainian)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-vi
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: a2a9d29749948e3262520e35532e5761
+Size: 49746
+Filename: luci-i18n-base-vi_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Tiếng Việt (Vietnamese)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-yua
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: c481b2faf26b6a1387b25c0501eb870c
+Size: 56744
+Filename: luci-i18n-base-yua_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - Yucateco (Yucatec Maya)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-zh-cn
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 1076472327166adf613668e1af8d9c82
+Size: 57972
+Filename: luci-i18n-base-zh-cn_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - 简体中文 (Chinese Simplified)
+License: Apache-2.0
+
+
+Package: luci-i18n-base-zh-tw
+Version: 25.036.29524~25cd2f3
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+MD5Sum: 5cce83050272f6b06c19d144094a7562
+Size: 54448
+Filename: luci-i18n-base-zh-tw_25.036.29524~25cd2f3_all.ipk
+Source: feeds/luci/modules/luci-base
+Description: Translation for luci-base - 繁體中文 (Chinese Traditional)
+License: Apache-2.0
+
+
+Package: luci-i18n-mosdns-zh-cn
+Version: 26.047.42544~c9d5d16
+Depends: libc, luci-app-mosdns
+Section: luci
+Architecture: all
+Maintainer: sbwml <admin@cooluc.com>
+MD5Sum: 730080e91934b933b768a91e719a1e57
+Size: 5308
+Filename: luci-i18n-mosdns-zh-cn_26.047.42544~c9d5d16_all.ipk
+Source: feeds/base/waynesg/luci-app-mosdns/luci-app-mosdns
+Description: Translation for luci-app-mosdns - 简体中文 (Chinese Simplified)
+
+
+Package: luci-i18n-tailscale-zh-cn
+Version: 25.129.33287~534eb3f
+Depends: libc, luci-app-tailscale
+Section: luci
+Architecture: all
+MD5Sum: 8c1d01ff3edfff4ba1377db5662aa208
+Size: 2706
+Filename: luci-i18n-tailscale-zh-cn_25.129.33287~534eb3f_all.ipk
+Source: feeds/base/waynesg/luci-app-tailscale
+Description: Translation for luci-app-tailscale - 简体中文 (Chinese Simplified)
+
+
+Package: luci-i18n-tailscale-zh-tw
+Version: 25.129.33287~534eb3f
+Depends: libc, luci-app-tailscale
+Section: luci
+Architecture: all
+MD5Sum: 8fa220985396a8a4cefab1bd78138176
+Size: 2716
+Filename: luci-i18n-tailscale-zh-tw_25.129.33287~534eb3f_all.ipk
+Source: feeds/base/waynesg/luci-app-tailscale
+Description: Translation for luci-app-tailscale - 繁體中文 (Chinese Traditional)
+
+
+Package: luci-i18n-timecontrol-zh-cn
+Version: 26.063.55840~a163f48
+Depends: libc, luci-app-timecontrol
+Section: luci
+Architecture: all
+Maintainer: sirpdboy <herboy2008@gmail.com>
+MD5Sum: f4214900901d4ee6b8794b1e0fa0fc51
+Size: 2086
+Filename: luci-i18n-timecontrol-zh-cn_26.063.55840~a163f48_all.ipk
+Source: feeds/base/waynesg/luci-app-timecontrol/luci-app-timecontrol
+Description: Translation for luci-app-timecontrol - 简体中文 (Chinese Simplified)
+License: Apache-2.0
+
+
+Package: luci-i18n-wechatpush-zh-cn
+Version: 24.215.31998~cc99ecb
+Depends: libc, luci-app-wechatpush
+Section: luci
+Architecture: all
+Maintainer: tty228 <tty228@yeah.net>
+MD5Sum: 597bd87b106a8b6d56d81feb18ae2db6
+Size: 9618
+Filename: luci-i18n-wechatpush-zh-cn_24.215.31998~cc99ecb_all.ipk
+Source: feeds/luci/applications/luci-app-wechatpush
+Description: Translation for luci-app-wechatpush - 简体中文 (Chinese Simplified)
+
+
+Package: luci-lib-base
+Version: 24.079.46064~3e3005c
+Depends: libc, lua, luci-lib-nixio, luci-lib-ip, luci-lib-jsonc, liblucihttp-lua
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: b67eab7b144b772a46a084f2edc492c6
+Size: 10494
+Filename: luci-lib-base_24.079.46064~3e3005c_all.ipk
+Source: feeds/luci/libs/luci-lib-base
+Description: basic libraries for luci
+License: Apache-2.0
+
+
+Package: luci-lib-ip
+Version: 24.322.80622~82bde8c
+Depends: libc, liblua5.1.5, libnl-tiny1
+Section: luci
+Architecture: x86_64
+Maintainer: OpenWrt LuCI community
+MD5Sum: 039c086276515c5a5ae92d579c5a8b18
+Size: 12678
+Filename: luci-lib-ip_24.322.80622~82bde8c_x86_64.ipk
+Source: feeds/luci/libs/luci-lib-ip
+Description: Lua library for IP calculation and routing information
+License: Apache-2.0
+
+
+Package: luci-lib-jsonc
+Version: 24.322.80622~5de2030
+Depends: libc, liblua5.1.5, libjson-c5
+Section: luci
+Architecture: x86_64
+Maintainer: OpenWrt LuCI community
+MD5Sum: e6c0eca7838287ea9a767e4d2823273c
+Size: 5174
+Filename: luci-lib-jsonc_24.322.80622~5de2030_x86_64.ipk
+Source: feeds/luci/libs/luci-lib-jsonc
+Description: Lua binding for JSON-C
+License: Apache-2.0
+
+
+Package: luci-lib-nixio
+Version: 24.330.47495~a08c4a3
+Depends: libc, liblua5.1.5
+Section: luci
+Architecture: x86_64
+Maintainer: OpenWrt LuCI community
+MD5Sum: ea2b3740fbfc40044edeacf3c432d7f6
+Size: 34134
+Filename: luci-lib-nixio_24.330.47495~a08c4a3_x86_64.ipk
+Source: feeds/luci/libs/luci-lib-nixio
+Description: NIXIO POSIX library
+License: Apache-2.0
+
+
+Package: luci-lua-runtime
+Version: 24.325.25720~cdab5ec
+Depends: libc, luci-base, lua, luci-lib-base, luci-lib-nixio, luci-lib-ip, luci-lib-jsonc, libubus-lua, liblucihttp-lua, ucode-mod-lua
+Section: luci
+Architecture: x86_64
+Maintainer: OpenWrt LuCI community
+MD5Sum: be530154a82c4cd729b4dbd9a32e37f3
+Size: 30574
+Filename: luci-lua-runtime_24.325.25720~cdab5ec_x86_64.ipk
+Source: feeds/luci/modules/luci-lua-runtime
+Description: LuCI Lua runtime libraries
+License: Apache-2.0
+
+
+Package: luci-theme-argon
+Version: 24.365.26922~33e3fca
+Depends: libc, wget, jsonfilter, luci-lua-runtime
+Section: luci
+Architecture: all
+Maintainer: OpenWrt LuCI community
+MD5Sum: c31dc0447087d0caf9b1372fb6bd3c67
+Size: 391216
+Filename: luci-theme-argon_24.365.26922~33e3fca_all.ipk
+Source: feeds/luci/themes/luci-theme-argon
+Description: Argon Theme
+
+
+Package: mbedtls-util
+Version: 3.6.5-r1
+Depends: libc, libmbedtls21
+Section: utils
+Architecture: x86_64
+MD5Sum: 47639b0b3ce45a1f9ed09790d04e445a
+Size: 9092
+Filename: mbedtls-util_3.6.5-r1_x86_64.ipk
+Source: feeds/base/package/libs/mbedtls
+Description: The aim of the mbedtls project is to provide a quality, open-source
+License: GPL-2.0-or-later
+
+
+Package: mlxsw_spectrum-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c9f057e3d1b3da2d899f6dff69d7bf1a
+Size: 33411668
+Filename: mlxsw_spectrum-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Mellanox Spectrum firmware
+
+
+Package: mlxsw_spectrum2-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: b47a4bef08dd9a11ed8069147ba12d9f
+Size: 21480658
+Filename: mlxsw_spectrum2-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Mellanox Spectrum-2 firmware
+
+
+Package: mlxsw_spectrum3-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e617109002ee954129caf5659d2f8a22
+Size: 17479324
+Filename: mlxsw_spectrum3-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Mellanox Spectrum-3 firmware
+
+
+Package: mlxsw_spectrum4-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: d0af8a35380847e73dce990626321151
+Size: 8429154
+Filename: mlxsw_spectrum4-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Mellanox Spectrum-4 firmware
+
+
+Package: mosdns
+Version: 5.3.3-r1
+Depends: libc, ca-bundle
+Provides: mosdns-neo
+Section: net
+Architecture: x86_64
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: 17ac81afff9d478a85e0e0ee1428894f
+Size: 6737926
+Filename: mosdns_5.3.3-r1_x86_64.ipk
+Source: feeds/packages/net/mosdns
+Description: A plug-in DNS forwarder/splitter
+License: GPL-3.0
+
+
+Package: mt7601u-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: b6c7e8f1a2e4ed6c743f0d701c793d2b
+Size: 27192
+Filename: mt7601u-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: MediaTek MT7601U firmware
+
+
+Package: mt7622bt-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 194a743486bac65fe31902da1a30aa41
+Size: 54620
+Filename: mt7622bt-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: mt7622bt firmware
+
+
+Package: mt7921bt-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: ef06bc48400c3bfe87835d2541a65156
+Size: 402524
+Filename: mt7921bt-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: mt7921bt firmware
+
+
+Package: mt7922bt-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3217e803b33588439b8272410c308d18
+Size: 516102
+Filename: mt7922bt-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: mt7922bt firmware
+
+
+Package: mt7981-wo-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 708a567930b04318b7680c1c4e338d9b
+Size: 52878
+Filename: mt7981-wo-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: MT7981 offload firmware
+
+
+Package: mt7986-wo-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: ba2eb7088ba7fe174a2bbb3d63e39ed4
+Size: 107144
+Filename: mt7986-wo-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: MT7986 offload firmware
+
+
+Package: mt7988-2p5g-phy-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 6bc57f10577f0dcd9d614979ebaed3a9
+Size: 40952
+Filename: mt7988-2p5g-phy-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: MT7988 built-in 2.5G Ethernet PHY firmware
+
+
+Package: mt7988-wo-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 9b54759a035c0ebade6ea7c4dabb041a
+Size: 94288
+Filename: mt7988-wo-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: MT7988 offload firmware
+
+
+Package: mwifiex-pcie-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 44b1df538538753b8742a1b278104859
+Size: 515650
+Filename: mwifiex-pcie-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Marvell 8897 firmware
+
+
+Package: mwifiex-sdio-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: d397ee339a78eff9bedff55cee1d05ee
+Size: 877474
+Filename: mwifiex-sdio-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Marvell 8887/8997 firmware
+
+
+Package: mwl8k-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 12e01500307b622a5f426c16319b4f2a
+Size: 193106
+Filename: mwl8k-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Marvell 8366/8687 firmware
+
+
+Package: nftables-json
+Version: 1.1.1-r1
+Depends: libc, kmod-nft-core, libnftnl11, jansson4
+Provides: nftables
+Section: net
+Architecture: x86_64
+MD5Sum: 951ba6ac9337d4f13111e617aaffc887
+Size: 322408
+Filename: nftables-json_1.1.1-r1_x86_64.ipk
+Source: feeds/base/package/network/utils/nftables
+Description: nftables userspace utility with JSON support
+License: GPL-2.0
+
+
+Package: nftables-nojson
+Version: 1.1.1-r1
+Depends: libc, kmod-nft-core, libnftnl11
+Provides: nftables
+Conflicts: nftables-json
+Section: net
+Architecture: x86_64
+MD5Sum: 7454764cdceafb607a2a33c97c58e21c
+Size: 285824
+Filename: nftables-nojson_1.1.1-r1_x86_64.ipk
+Source: feeds/base/package/network/utils/nftables
+Description: nftables userspace utility no JSON support
+License: GPL-2.0
+
+
+Package: openssl-util
+Version: 3.0.19-r1
+Depends: libc, libopenssl3, libopenssl-conf
+Section: utils
+Architecture: x86_64
+Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
+MD5Sum: 22ff6aed6b0e1cf1f5f4abe8031a64a9
+Size: 345822
+Filename: openssl-util_3.0.19-r1_x86_64.ipk
+Source: feeds/base/package/libs/openssl
+Description: The OpenSSL Project is a collaborative effort to develop a robust,
+License: Apache-2.0
+
+
+Package: r8152-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 0c06f223e5a7ccbe47305875e3d1ab42
+Size: 10896
+Filename: r8152-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8152 firmware
+
+
+Package: r8169-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: fda1436da1c81bc51e7ebb1476a77178
+Size: 42432
+Filename: r8169-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8169 firmware
+
+
+Package: radeon-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 4086b354aef2ffac9867395a711664df
+Size: 3523746
+Filename: radeon-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Radeon Video Driver firmware
+
+
+Package: rpcd-mod-file
+Version: 2025.09.01~bba95191-r1
+Depends: libc, libubus20250102, libubox20240329, rpcd
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: fd0f1e5e83c3771c5c4826d20b2cca69
+Size: 7880
+Filename: rpcd-mod-file_2025.09.01~bba95191-r1_x86_64.ipk
+Source: feeds/base/package/system/rpcd
+Description: Provides ubus calls for file and directory operations.
+License: ISC
+
+
+Package: rpcd-mod-iwinfo
+Version: 2025.09.01~bba95191-r1
+Depends: libiwinfo (>=2023.01.21), libc, libubus20250102, libubox20240329, rpcd, libiwinfo20230701
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 1b85a32c7b7ae2e56e643928d9b16bb5
+Size: 8252
+Filename: rpcd-mod-iwinfo_2025.09.01~bba95191-r1_x86_64.ipk
+Source: feeds/base/package/system/rpcd
+Description: Provides ubus calls for accessing iwinfo data.
+License: ISC
+
+
+Package: rpcd-mod-luci
+Version: 20240305-r1
+Depends: libc, rpcd, libubox20240329, libubus20250102, libnl-tiny1
+Section: libs
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 614c5e0949c9d5ef65c04edf569fb3f8
+Size: 14520
+Filename: rpcd-mod-luci_20240305-r1_x86_64.ipk
+Source: feeds/luci/libs/rpcd-mod-luci
+Description: Provides LuCI backend ubus RPC operations.
+License: Apache-2.0
+
+
+Package: rpcd-mod-rpcsys
+Version: 2025.09.01~bba95191-r1
+Depends: libc, libubus20250102, libubox20240329, rpcd
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: afccfd5f0e318626f3c60146da0c5107
+Size: 4658
+Filename: rpcd-mod-rpcsys_2025.09.01~bba95191-r1_x86_64.ipk
+Source: feeds/base/package/system/rpcd
+Description: Provides ubus calls for sysupgrade and password changing.
+License: ISC
+
+
+Package: rpcd-mod-ucode
+Version: 2025.09.01~bba95191-r1
+Depends: libc, libubus20250102, libubox20240329, rpcd, libucode20230711
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 39ddbac11fe0ed859d2af1aaa27e3e1a
+Size: 8434
+Filename: rpcd-mod-ucode_2025.09.01~bba95191-r1_x86_64.ipk
+Source: feeds/base/package/system/rpcd
+Description: Allows implementing plugins using ucode scripts.
+License: ISC
+
+
+Package: rpcd
+Version: 2025.09.01~bba95191-r1
+Depends: libc, libubus20250102, libubox20240329, libuci20250120, libblobmsg-json20240329, libjson-c5
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 5d7a98beba1a091dbeb43dc8db2a8d2e
+Size: 26036
+Filename: rpcd_2025.09.01~bba95191-r1_x86_64.ipk
+Source: feeds/base/package/system/rpcd
+Description: This package provides the UBUS RPC backend server to expose various
+License: ISC
+
+
+Package: rs9113-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3361a80e895ee9fd9f7914130542c0d3
+Size: 85384
+Filename: rs9113-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RedPine Signals rs9113 firmware
+
+
+Package: rt2800-pci-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 611ebbb09822bffcffb54c50cc5a93a6
+Size: 4698
+Filename: rt2800-pci-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Ralink RT28xx/3xxx PCI/SoC firmware
+
+
+Package: rt2800-usb-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 79586985b4697a71ae8d3c8213de7955
+Size: 3668
+Filename: rt2800-usb-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Ralink RT28xx/3xxx USB firmware
+
+
+Package: rt61-pci-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 824cc74674a3572859a2d4539055fbe0
+Size: 7224
+Filename: rt61-pci-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Ralink RT2561 firmware
+
+
+Package: rt73-usb-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e0470eb23846832085a4342efae11d7d
+Size: 2038
+Filename: rt73-usb-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: Ralink RT2573 firmware
+
+
+Package: rtl8188eu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e0592168ca796269078447920e47c696
+Size: 11166
+Filename: rtl8188eu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8188EU firmware
+
+
+Package: rtl8188fu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3301deba04e5bc76237c17b028e046d6
+Size: 14810
+Filename: rtl8188fu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8188FU firmware
+
+
+Package: rtl8192ce-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c604534eddc8985a7cf59359015d9eb4
+Size: 21514
+Filename: rtl8192ce-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8192CE firmware
+
+
+Package: rtl8192cu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 14fe79a2319de7c89ac60d3948215edf
+Size: 19466
+Filename: rtl8192cu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8192CU firmware
+
+
+Package: rtl8192de-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 744e694424d620a5fc6a3a1dc09583c6
+Size: 14286
+Filename: rtl8192de-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8192DE firmware
+
+
+Package: rtl8192du-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 14cf384c2d6d80fd2d1ded83d275906b
+Size: 14516
+Filename: rtl8192du-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8192DU firmware
+
+
+Package: rtl8192eu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 0a4f19bbb00ee4f813c92a39d3d6fa15
+Size: 21712
+Filename: rtl8192eu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8192EU firmware
+
+
+Package: rtl8192se-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 8c9668e053fac9715b3cc327b3103b43
+Size: 37528
+Filename: rtl8192se-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8192SE firmware
+
+
+Package: rtl8723au-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 5b8410584c95d76afcfae8dcaa972d20
+Size: 28746
+Filename: rtl8723au-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8723AU firmware
+
+
+Package: rtl8723be-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 9dee786a19c06e480930e40560dd4a8b
+Size: 36724
+Filename: rtl8723be-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8723BE firmware
+
+
+Package: rtl8723bu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 7f2b2b94fabfd0302a37aa4e2d671959
+Size: 22182
+Filename: rtl8723bu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8723BU firmware
+
+
+Package: rtl8723de-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 6090aed7ec9ad53598ae118ebd533e86
+Size: 19606
+Filename: rtl8723de-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8723DE firmware
+
+
+Package: rtl8761a-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 0c9019ef25215b35735d3f6c090f0a9c
+Size: 43470
+Filename: rtl8761a-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8761A firmware
+
+
+Package: rtl8761b-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 2173a5087cd51ba6d52920f9c4be6b62
+Size: 32496
+Filename: rtl8761b-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8761B firmware
+
+
+Package: rtl8761bu-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 5b505720c34da0b6298d10efb5e6f640
+Size: 31884
+Filename: rtl8761bu-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8761BU firmware
+
+
+Package: rtl8812a-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3bdf6e83eb1628c3663821e88e7c6aec
+Size: 18240
+Filename: rtl8812a-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8812AU firmware
+
+
+Package: rtl8821a-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e9579e942bd85e6d2359c010f4f3a572
+Size: 21216
+Filename: rtl8821a-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8821AU firmware
+
+
+Package: rtl8821ae-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 16bd105f8eb386a928e776bd6d6d58c2
+Size: 28660
+Filename: rtl8821ae-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8821AE firmware
+
+
+Package: rtl8821ce-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: abcf8660484a4c3b47f933ac544b93fd
+Size: 58076
+Filename: rtl8821ce-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8821CE firmware
+
+
+Package: rtl8822be-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 54e89a85197e14e1ade210a47555aad6
+Size: 82908
+Filename: rtl8822be-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8822BE firmware
+
+
+Package: rtl8822ce-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3e981835c7061267d13651efe59acbd2
+Size: 162666
+Filename: rtl8822ce-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8822CE firmware
+
+
+Package: rtl8851be-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 1867d60ee38254d6af6ff94aba8de9a5
+Size: 597814
+Filename: rtl8851be-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8851BE firmware
+
+
+Package: rtl8852ae-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: b7f1e18084fe8191a14761468c864ec7
+Size: 667266
+Filename: rtl8852ae-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8852AE firmware
+
+
+Package: rtl8852be-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: c2f6294d5bc0a3f5235d3f4ac71db2d0
+Size: 639036
+Filename: rtl8852be-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8852BE firmware
+
+
+Package: rtl8852ce-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 47b9f2ca0907c10cc701e6e0b9bef803
+Size: 830548
+Filename: rtl8852ce-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8852CE firmware
+
+
+Package: rtl8922ae-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 6002bdd04200b268736d0bc90db5459c
+Size: 827032
+Filename: rtl8922ae-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: RealTek RTL8922AE firmware
+
+
+Package: sub-web
+Version: 2022.11.10~71e53414-r1
+Depends: libc, subconverter
+Section: net
+Architecture: all
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: 1367f0035762b0587629e11d9c9a87c4
+Size: 1413762
+Filename: sub-web_2022.11.10~71e53414-r1_all.ipk
+Source: feeds/packages/net/sub-web
+Description: Based on vue-cli and subconverter, for generating proxy subscription
+License: MIT
+
+
+Package: subconverter
+Version: 0.9.0~69749107-r1
+Depends: libc, libatomic1, libcron, libcurl4, libevent2-7, libpcre2, libquickjs, libstdcpp6, libyaml-cpp0.7
+Section: utils
+Architecture: x86_64
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: 9628375e93db1db58dcb9ab0e1362f52
+Size: 1617426
+Filename: subconverter_0.9.0~69749107-r1_x86_64.ipk
+Source: feeds/packages/net/subconverter
+Description: Utility to convert between various proxy subscription format
+License: GPL-3.0
+
+
+Package: tailscale
+Version: 1.78.1-r1
+Depends: libc, ca-bundle, kmod-tun
+Provides: tailscaled
+Section: net
+Architecture: x86_64
+Maintainer: Zephyr Lykos <self@mochaa.ws>, Sandro Jäckel <sandro.jaeckel@gmail.com>
+MD5Sum: 5d4c2c85b7699dd688a5839043a1b70c
+Size: 9591718
+Filename: tailscale_1.78.1-r1_x86_64.ipk
+Source: feeds/packages/net/tailscale
+Description: It creates a secure network between your servers, computers,
+License: BSD-3-Clause
+
+
+Package: terminfo
+Version: 6.4-r2
+Depends: libc
+Section: libs
+Architecture: x86_64
+MD5Sum: 1957e704ae206b6d30b200b4379a2054
+Size: 9510
+Filename: terminfo_6.4-r2_x86_64.ipk
+Source: feeds/base/package/libs/ncurses
+Description: Terminal Info Database (ncurses)
+License: MIT
+
+
+Package: ti-3410-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 3b130301c90117ac30a172c00258830d
+Size: 8602
+Filename: ti-3410-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: TI 3410 firmware
+
+
+Package: ti-5052-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 81383f2b9d39c5dda9e15423406aa94e
+Size: 8578
+Filename: ti-5052-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: TI 5052 firmware
+
+
+Package: ubus
+Version: 2025.10.17~60e04048-r1
+Depends: libc, libubus20250102, libblobmsg-json20240329, ubusd
+Section: base
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e0f1e340393b8907f96289ab0731c399
+Size: 6908
+Filename: ubus_2025.10.17~60e04048-r1_x86_64.ipk
+Source: feeds/base/package/system/ubus
+Description: OpenWrt RPC client utility
+License: LGPL-2.1
+
+
+Package: ubusd
+Version: 2025.10.17~60e04048-r1
+Depends: libc, libubox20240329, libblobmsg-json20240329
+Section: base
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: e8304e9b0496ac96bf5b08df644c21e5
+Size: 13768
+Filename: ubusd_2025.10.17~60e04048-r1_x86_64.ipk
+Source: feeds/base/package/system/ubus
+Description: OpenWrt RPC daemon
+License: LGPL-2.1
+
+
+Package: uci
+Version: 2025.01.20~16ff0bad-r1
+Depends: libc, libuci20250120
+Section: base
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: d3fa5e62fe6e400b4c0c51780c9ddfb0
+Size: 7816
+Filename: uci_2025.01.20~16ff0bad-r1_x86_64.ipk
+Source: feeds/base/package/system/uci
+Description: Utility for the Unified Configuration Interface (UCI)
+License: LGPL-2.1
+
+
+Package: uclient-fetch
+Version: 2024.10.22~88ae8f20-r1
+Depends: libc, libuclient20201210
+Provides: wget
+Section: net
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 91439e79fdd3e46a8d105d708b1edec0
+Size: 8482
+Filename: uclient-fetch_2024.10.22~88ae8f20-r1_x86_64.ipk
+Source: feeds/base/package/libs/uclient
+Description: Tiny wget replacement using libuclient
+License: ISC
+
+
+Package: ucode-mod-debug
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libubox20240329, libucode20230711
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 5e60ce300165d6743f08d3264bd1250e
+Size: 8984
+Filename: ucode-mod-debug_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The debug plugin module provides runtime debugging and introspection facilities.
+License: ISC
+
+
+Package: ucode-mod-digest
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 6c1d323dcd70a444086e447789e72bdf
+Size: 18870
+Filename: ucode-mod-digest_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The digest module allows ucode scripts to use libmd digests.
+License: ISC
+
+
+Package: ucode-mod-fs
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 7cc18f7b876e7fe1bcd75589bc61d85a
+Size: 12468
+Filename: ucode-mod-fs_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The filesystem plugin module allows interaction with the local file system.
+License: ISC
+
+
+Package: ucode-mod-html
+Version: 1
+Depends: libc, libucode20230711
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: d5541eb2270d9f893e0dbbddf1012cab
+Size: 31602
+Filename: ucode-mod-html_1_x86_64.ipk
+Source: feeds/luci/contrib/package/ucode-mod-html
+Description: ucode HTML utility library
+License: ISC
+
+
+Package: ucode-mod-log
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libubox20240329
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: d1ea319bef45173472c250d83f0ca4bb
+Size: 5154
+Filename: ucode-mod-log_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The log plugin module provides access to the syslog and libubox ulog APIs.
+License: ISC
+
+
+Package: ucode-mod-lua
+Version: 1
+Depends: libc, libucode20230711, liblua5.1.5
+Section: utils
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: e0bebbe2d0fdae8926d456df5e91419b
+Size: 9490
+Filename: ucode-mod-lua_1_x86_64.ipk
+Source: feeds/luci/contrib/package/ucode-mod-lua
+Description: ucode to Lua bridge library
+License: ISC
+
+
+Package: ucode-mod-math
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 37d304fb727c200037e211571cc97a54
+Size: 3426
+Filename: ucode-mod-math_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The math plugin provides access to various <math.h> procedures.
+License: ISC
+
+
+Package: ucode-mod-nl80211
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libnl-tiny1, libubox20240329
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: c38552dd1764e4ef204d7f6030e297d6
+Size: 23632
+Filename: ucode-mod-nl80211_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The nl80211 plugin provides access to the Linux wireless 802.11 netlink API.
+License: ISC
+
+
+Package: ucode-mod-resolv
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 3fe35ff17b0ec709d997f6080a4088bf
+Size: 8438
+Filename: ucode-mod-resolv_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The resolv plugin implements simple DNS resolving.
+License: ISC
+
+
+Package: ucode-mod-rtnl
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libnl-tiny1, libubox20240329
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 46e5d87145e76da6c24121fb6d8e6d4c
+Size: 29494
+Filename: ucode-mod-rtnl_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The rtnl plugin provides access to the Linux routing netlink API.
+License: ISC
+
+
+Package: ucode-mod-socket
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: c7d00c4f3ab943f3d96d9d40eab29df1
+Size: 25774
+Filename: ucode-mod-socket_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The socket plugin provides access to IPv4
+License: ISC
+
+
+Package: ucode-mod-struct
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 8d49d0e0d1c46eebecb0aa107a0623d7
+Size: 13102
+Filename: ucode-mod-struct_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The struct plugin implements Python 3 compatible struct.pack/unpack functionality.
+License: ISC
+
+
+Package: ucode-mod-ubus
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libubus20250102, libblobmsg-json20240329
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 90c3eb86420f620d4e79f804dfc07518
+Size: 18188
+Filename: ucode-mod-ubus_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The ubus module allows ucode template scripts to enumerate and invoke ubus procedures.
+License: ISC
+
+
+Package: ucode-mod-uci
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libuci20250120
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 82e5a7fe7933a8846affee5f8a373101
+Size: 8880
+Filename: ucode-mod-uci_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The uci module allows templates to read and modify uci configuration.
+License: ISC
+
+
+Package: ucode-mod-uclient
+Version: 2024.10.22~88ae8f20-r1
+Depends: libc, libucode20230711, libuclient20201210
+Section: utils
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 4ccb619285d15b2cc3ccd9f4f8625fa8
+Size: 5960
+Filename: ucode-mod-uclient_2024.10.22~88ae8f20-r1_x86_64.ipk
+Source: feeds/base/package/libs/uclient
+Description: ucode uclient module
+License: ISC
+
+
+Package: ucode-mod-uloop
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, ucode, libubox20240329
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 518cf6b0b998fbf0a356569b8602082d
+Size: 10044
+Filename: ucode-mod-uloop_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: The uloop module allows ucode scripts to interact with OpenWrt uloop event loop implementation.
+License: ISC
+
+
+Package: ucode
+Version: 2025.07.18~3f64c808-r1
+Depends: libc, libucode20230711
+Section: lang
+Architecture: x86_64
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+MD5Sum: 4fe59c9133ac86e95a153556ddd01195
+Size: 7228
+Filename: ucode_2025.07.18~3f64c808-r1_x86_64.ipk
+Source: feeds/base/package/utils/ucode
+Description: ucode is a tiny script interpreter featuring an ECMAScript oriented
+License: ISC
+
+
+Package: v2dat
+Version: 2022.12.15~47b8ee51-r3
+Depends: libc
+Section: utils
+Architecture: x86_64
+Maintainer: sbwml <admin@cooluc.com>
+MD5Sum: 6b10f5e5c38de950cdac3ca4cb2c9126
+Size: 2298626
+Filename: v2dat_2022.12.15~47b8ee51-r3_x86_64.ipk
+Source: feeds/base/waynesg/luci-app-mosdns/v2dat
+Description: V2ray geo/ip data unpack tools
+License: GPL-3.0
+
+
+Package: v2ray-geoip
+Version: 202501190004-r1
+Depends: libc
+Provides: v2ray-geodata, xray-geodata, xray-geoip
+Section: net
+Architecture: all
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: d58d63d5f15538cbfbc2c4af416d5877
+Size: 4058486
+Filename: v2ray-geoip_202501190004-r1_all.ipk
+Source: feeds/packages/net/v2ray-geodata
+Description: GeoIP List for V2Ray
+License: CC-BY-SA-4.0
+
+
+Package: v2ray-geosite-ir
+Version: 202502030035-r1
+Depends: libc
+Provides: xray-geosite-ir
+Section: net
+Architecture: all
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: 6d708e54f250317c0efa59c491613fe1
+Size: 1051470
+Filename: v2ray-geosite-ir_202502030035-r1_all.ipk
+Source: feeds/packages/net/v2ray-geodata
+Description: Iran Geosite List for V2Ray
+License: MIT
+
+
+Package: v2ray-geosite
+Version: 20250124154827-r1
+Depends: libc
+Provides: v2ray-geodata, xray-geodata, xray-geosite
+Section: net
+Architecture: all
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+MD5Sum: 096fa11bc2777d0e33add87a2b5015ae
+Size: 633928
+Filename: v2ray-geosite_20250124154827-r1_all.ipk
+Source: feeds/packages/net/v2ray-geodata
+Description: Geosite List for V2Ray
+License: MIT
+
+
+Package: wget-nossl
+Version: 1.24.5-r1
+Depends: libc, libpcre2, zlib
+Provides: gnu-wget, wget
+Section: net
+Architecture: x86_64
+MD5Sum: 0b4fe607ccb6c587a7a0f28c9b9821bd
+Size: 194672
+Filename: wget-nossl_1.24.5-r1_x86_64.ipk
+Source: feeds/packages/net/wget
+Description: Wget is a network utility to retrieve files from the Web using http
+License: GPL-3.0-or-later
+
+
+Package: wget-ssl
+Version: 1.24.5-r1
+Depends: libc, libpcre2, zlib, libopenssl3, librt
+Provides: gnu-wget, wget
+Section: net
+Architecture: x86_64
+MD5Sum: b90aceff0614df7a1687b26b23246c01
+Size: 216830
+Filename: wget-ssl_1.24.5-r1_x86_64.ipk
+Source: feeds/packages/net/wget
+Description: Wget is a network utility to retrieve files from the Web using http
+License: GPL-3.0-or-later
+
+
+Package: wil6210-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 78465a2c439f70b64bf3e3352597479b
+Size: 255662
+Filename: wil6210-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: wil6210 firmware
+
+
+Package: wl12xx-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: fc749dbd4f2327b65d406a6e52a1091f
+Size: 1175836
+Filename: wl12xx-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: TI WL12xx firmware
+
+
+Package: wl18xx-firmware
+Version: 20241110-r2
+Depends: libc
+Section: firmware
+Architecture: x86_64
+Maintainer: Felix Fietkau <nbd@nbd.name>
+MD5Sum: 2cefcf62508520fa8883428193a0d99a
+Size: 344078
+Filename: wl18xx-firmware_20241110-r2_x86_64.ipk
+Source: feeds/base/package/firmware/linux-firmware
+Description: TI WL18xx firmware
+
+
+Package: zlib-dev
+Version: 1.3.1-r1
+Depends: libc, zlib
+Section: devel
+Architecture: x86_64
+MD5Sum: 48f1b860c855adca416d945ef29408b2
+Size: 80444
+Filename: zlib-dev_1.3.1-r1_x86_64.ipk
+Source: feeds/base/package/libs/zlib
+Description: zlib is a lossless data-compression library.
+License: Zlib
+
+
+Package: zlib
+Version: 1.3.1-r1
+Depends: libc
+Section: libs
+Architecture: x86_64
+MD5Sum: 140038006a0c88244903fc24925aba91
+Size: 44024
+Filename: zlib_1.3.1-r1_x86_64.ipk
+Source: feeds/base/package/libs/zlib
+Description: zlib is a lossless data-compression library.
+License: Zlib
+
+
