@@ -46,15 +46,17 @@ jobs:
           # 1) Remove signature verification helper so local file:packages doesn't require Packages.sig
           sed -i '/--verify-program/d' Makefile
 
-          # 2) Pin LISTS_DIR to a stable absolute path under TOPDIR.
-          # The default Makefile computes a relative lists dir based on TARGET_DIR, which can diverge
-          # between update and install phases and cause "Unknown package".
-          mkdir -p dl/opkg-lists
-          sed -i -E 's#^LISTS_DIR:=.*#LISTS_DIR:=$(TOPDIR)/dl/opkg-lists#' Makefile
+          # 2) Stop forcing a custom --lists-dir.
+          # opkg + --offline-root can behave oddly with absolute lists-dir paths; this caused situations
+          # where package_list could see a package but make image later reported "Unknown package".
+          # Remove the --lists-dir flag from OPKG invocation and let opkg use its default lists path.
+          sed -i -E 's/[[:space:]]+--lists-dir[[:space:]]+\$\(LISTS_DIR\)//' Makefile
 
           echo "== verify-program occurrences (should be empty) =="
           grep -n -- "--verify-program" Makefile || true
-          echo "== LISTS_DIR =="
+          echo "== OPKG definition (context) =="
+          grep -n '^OPKG' -n Makefile | head -n 5 || true
+          echo "== LISTS_DIR (may still exist but unused) =="
           grep -n '^LISTS_DIR:=' Makefile || true
 
       - name: Provide sha256 wrapper (ImageBuilder index script compatibility)
