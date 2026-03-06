@@ -84,7 +84,8 @@ jobs:
                 luci-app-autoupdate \
                 luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
 
-              make image PROFILE="generic" FILES="files" V=s PACKAGES="$PKGS"
+              # docker/containerd + luci apps make rootfs much larger than default; enlarge ext4 rootfs (MiB)
+              make image PROFILE="generic" FILES="files" V=s ROOTFS_PARTSIZE=1024 PACKAGES="$PKGS"
             '
 
       - name: Upload images
