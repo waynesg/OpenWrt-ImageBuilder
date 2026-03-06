@@ -108,8 +108,17 @@ jobs:
             luci-app-yt-dlp
           )
 
+          echo "== waynesg package dirs =="
+          ls -la package/waynesg | sed -n '1,200p'
+          echo "== waynesg Makefiles =="
+          find package/waynesg -maxdepth 3 -name Makefile -print | sed -n '1,200p'
+
           for p in "${TARGETS[@]}"; do
             echo "== compile: $p =="
+            if [ ! -f "package/waynesg/$p/Makefile" ]; then
+              echo "ERROR: missing package/waynesg/$p/Makefile" >&2
+              exit 2
+            fi
             make "package/waynesg/$p/compile" V=s
           done
 
