@@ -75,39 +75,16 @@ jobs:
               gzip -9nc packages/Packages > packages/Packages.gz
               grep -nE "^Package: luci-app-(tailscale|autoupdate)$" packages/Packages
 
-              make image PROFILE="generic" FILES="files" PACKAGES="\
-                luci \
-                # core tools
-                ca-bundle \
-                # docker stack
-                containerd \
-                docker \
-                dockerd \
-                docker-compose \
-                luci-app-dockerman \
-                # storage / file
-                luci-app-diskman \
-                luci-app-filemanager \
-                # network common
-                luci-app-upnp \
-                luci-app-wol \
-                luci-app-ddns \
-                luci-app-smartdns \
-                # vpn/overlay
-                luci-app-openvpn \
-                luci-app-openvpn-server \
-                luci-app-zerotier \
-                tailscale \
-                luci-app-tailscale \
-                # autoupdate
+              PKGS="luci ca-bundle \
+                containerd docker dockerd docker-compose luci-app-dockerman \
+                luci-app-diskman luci-app-filemanager \
+                luci-app-upnp luci-app-wol luci-app-ddns luci-app-smartdns \
+                luci-app-openvpn luci-app-openvpn-server luci-app-zerotier \
+                tailscale luci-app-tailscale \
                 luci-app-autoupdate \
-                # extra services
-                luci-app-samba4 \
-                luci-app-vsftpd \
-                luci-app-usb-printer \
-                luci-app-vlmcsd \
-                luci-app-unblockneteasemusic \
-              " V=s
+                luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
+
+              make image PROFILE="generic" FILES="files" V=s PACKAGES="$PKGS"
             '
 
       - name: Upload images
