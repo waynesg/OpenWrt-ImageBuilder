@@ -131,8 +131,13 @@ jobs:
           sed -i '/^src[[:space:]]\+imagebuilder[[:space:]]\+file:packages/d' repositories.conf
           echo 'src imagebuilder file:packages' >> repositories.conf
 
+          echo "== pin opkg lists_dir (avoid Makefile relative-path lists-dir quirks) =="
+          mkdir -p dl/opkg-lists
+          sed -i '/^option[[:space:]]\+lists_dir/d' repositories.conf
+          echo "option lists_dir $(pwd)/dl/opkg-lists" >> repositories.conf
+
           echo "== show repositories.conf (tail) =="
-          tail -n 40 repositories.conf
+          tail -n 60 repositories.conf
 
           echo "== opkg list from local repo (must show luci-app-*) =="
           OPKG=staging_dir/host/bin/opkg
