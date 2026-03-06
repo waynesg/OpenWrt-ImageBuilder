@@ -63,6 +63,10 @@ jobs:
               set -e
               cd /home/build/immortalwrt
 
+              # Disable signature checking for local repo (otherwise opkg requires packages/Packages.sig)
+              # opkg treats check_signature as a boolean: if the line exists, it is ON.
+              sed -i "/^option[[:space:]]\+check_signature/d" repositories.conf
+
               # Build local Packages index from downloaded ipks
               rm -f packages/Packages packages/Packages.gz
               rm -rf /tmp/opkg-utils
