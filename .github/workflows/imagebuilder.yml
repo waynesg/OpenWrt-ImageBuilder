@@ -115,10 +115,14 @@ jobs:
           echo "== local packages dir =="
           ls -la packages | sed -n '1,120p'
 
-          echo "== force rebuild local Packages index (no silent redirects) =="
+          echo "== force rebuild local Packages index (use opkg-make-index; avoid ipkg-make-index.sh sed/tar issues) =="
           rm -f packages/Packages packages/Packages.gz
-          ./scripts/ipkg-make-index.sh packages > packages/Packages
+
+          rm -rf /tmp/opkg-utils
+          git clone --depth=1 https://git.yoctoproject.org/opkg-utils /tmp/opkg-utils
+          /tmp/opkg-utils/opkg-make-index packages > packages/Packages
           gzip -9nc packages/Packages > packages/Packages.gz
+
           echo "== verify local Packages contains luci-app entries =="
           grep -nE '^Package: luci-app-(tailscale|autoupdate)$' packages/Packages || { echo "ERROR: local index missing luci-app stanzas"; exit 1; }
 
