@@ -105,8 +105,7 @@ jobs:
                 tailscale luci-app-tailscale \
                 luci-app-autoupdate \
                 luci-app-argon-config luci-app-aurora-config \
-                luci-app-wechatpush luci-app-onliner luci-app-airconnect luci-app-timecontrol \
-                luci-app-subconverter \
+                # luci-app-wechatpush luci-app-onliner luci-app-airconnect luci-app-timecontrol luci-app-subconverter (temporarily dropped - segfault)
                 luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
 
               # docker/containerd + luci apps make rootfs much larger than default; enlarge ext4 rootfs (MiB)
