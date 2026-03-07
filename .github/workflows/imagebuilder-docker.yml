@@ -111,6 +111,33 @@ jobs:
               make image PROFILE="generic" FILES="files" V=s ROOTFS_PARTSIZE=1024 PACKAGES="$PKGS"
             '
 
+      - name: Find firmware for release
+        id: firmware
+        run: |
+          cd bin/targets/x86/64
+          # Find the factory image (upgradeable .bin)
+          FIRM=$(ls openwrt-x86-64-generic-squashfs-factory*.img.gz 2>/dev/null | head -1)
+          if [ -z "$FIRM" ]; then
+            FIRM=$(ls openwrt-x86-64-generic-squashfs-combined*.img.gz 2>/dev/null | head -1)
+          fi
+          echo "Firmware: $FIRM"
+          # Rename to .bin for autoupdate compatibility
+          BIN_NAME="openwrt-x86-64-${LUCI_VERSION}.bin.gz"
+          cp "$FIRM" "$BIN_NAME"
+          echo "bin_name=$BIN_NAME" >> $GITHUB_OUTPUT
+          echo "bin_size=$(ls -lh $BIN_NAME | awk '{print $5}')"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: OpenWrt ImmortalWrt ${LUCI_VERSION} Firmware
+          tag_name: v${LUCI_VERSION}
+          draft: false
+          prerelease: false
+          files: bin/targets/x86/64/${{ steps.firmware.outputs.bin_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload images
         uses: actions/upload-artifact@v4
         with:
