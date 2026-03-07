@@ -114,11 +114,21 @@ jobs:
       - name: Find firmware for release
         id: firmware
         run: |
+          set -e
+          # ImageBuilder outputs to bin/targets/x86/64/
           cd bin/targets/x86/64
+          echo "=== Files in output dir ==="
+          ls -la
+          echo "=== Looking for firmware ==="
           # Find the factory image (upgradeable .bin)
           FIRM=$(ls openwrt-x86-64-generic-squashfs-factory*.img.gz 2>/dev/null | head -1)
           if [ -z "$FIRM" ]; then
             FIRM=$(ls openwrt-x86-64-generic-squashfs-combined*.img.gz 2>/dev/null | head -1)
+          fi
+          if [ -z "$FIRM" ]; then
+            echo "ERROR: No firmware found!"
+            ls -la *.img.gz 2>/dev/null || true
+            exit 1
           fi
           echo "Firmware: $FIRM"
           # Rename to .bin for autoupdate compatibility
@@ -126,6 +136,7 @@ jobs:
           cp "$FIRM" "$BIN_NAME"
           echo "bin_name=$BIN_NAME" >> $GITHUB_OUTPUT
           echo "bin_size=$(ls -lh $BIN_NAME | awk '{print $5}')"
+          ls -lh "$BIN_NAME"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
