@@ -131,9 +131,10 @@ jobs:
             exit 1
           fi
           echo "Firmware: $FIRM"
-          # Rename to .bin for autoupdate compatibility
+          # Copy to GITHUB_WORKSPACE (writable) with new name
+          cd ${{ github.workspace }}
           BIN_NAME="openwrt-x86-64-${LUCI_VERSION}.bin.gz"
-          cp "$FIRM" "$BIN_NAME"
+          cp "bin/targets/x86/64/$FIRM" "$BIN_NAME"
           echo "bin_name=$BIN_NAME" >> $GITHUB_OUTPUT
           echo "bin_size=$(ls -lh $BIN_NAME | awk '{print $5}')"
           ls -lh "$BIN_NAME"
@@ -145,7 +146,7 @@ jobs:
           tag_name: v${LUCI_VERSION}
           draft: false
           prerelease: false
-          files: bin/targets/x86/64/${{ steps.firmware.outputs.bin_name }}
+          files: ${{ steps.firmware.outputs.bin_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
