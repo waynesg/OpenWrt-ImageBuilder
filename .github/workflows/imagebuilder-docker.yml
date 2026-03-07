@@ -108,7 +108,7 @@ jobs:
                 luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
 
               # docker/containerd + luci apps make rootfs much larger than default; enlarge ext4 rootfs (MiB)
-              make image PROFILE="generic" FILES="files" V=s ROOTFS_PARTSIZE=1024 PACKAGES="$PKGS"
+              make image PROFILE="generic" FILES="files" V=s ROOTFS_PARTSIZE=2048 PACKAGES="$PKGS"
             '
 
       - name: Find firmware for release
