@@ -126,7 +126,7 @@ jobs:
           fi
           echo "Firmware: $FIRM"
           cd ${{ github.workspace }}
-          BIN_NAME="openwrt-x86-64-${LUCI_VERSION}.bin.gz"
+          BIN_NAME="openwrt-x86-64-${{ env.LUCI_VERSION }}.bin.gz"
           cp "bin/targets/x86/64/$FIRM" "$BIN_NAME"
           echo "bin_name=$BIN_NAME" >> $GITHUB_OUTPUT
           echo "bin_size=$(ls -lh $BIN_NAME | awk '{print $5}')"
@@ -135,8 +135,8 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: OpenWrt ImmortalWrt ${LUCI_VERSION} Firmware
-          tag_name: v${LUCI_VERSION}
+          name: OpenWrt ImmortalWrt ${{ env.LUCI_VERSION }} Firmware
+          tag_name: v${{ env.LUCI_VERSION }}
           draft: false
           prerelease: false
           files: ${{ steps.firmware.outputs.bin_name }}
