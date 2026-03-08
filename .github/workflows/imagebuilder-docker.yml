@@ -11,6 +11,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -43,10 +45,8 @@ jobs:
             airconnect
             luci-app-timecontrol
             luci-app-subconverter
-            # luci-app-yt-dlp (removed)
           )
 
-          # cache-bust
           qs="?ts=${GITHUB_RUN_ID}"
 
           fetch_one() {
@@ -85,11 +85,8 @@ jobs:
               set -e
               cd /home/build/immortalwrt
 
-              # Disable signature checking for local repo (otherwise opkg requires packages/Packages.sig)
-              # opkg treats check_signature as a boolean: if the line exists, it is ON.
               sed -i "/^option[[:space:]]\+check_signature/d" repositories.conf
 
-              # Build local Packages index from downloaded ipks
               rm -f packages/Packages packages/Packages.gz
               rm -rf /tmp/opkg-utils
               git clone --depth=1 https://git.yoctoproject.org/opkg-utils /tmp/opkg-utils
@@ -107,7 +104,6 @@ jobs:
                 luci-app-argon-config luci-app-aurora-config \
                 luci-app-samba4 luci-app-vsftpd luci-app-usb-printer luci-app-vlmcsd luci-app-unblockneteasemusic"
 
-              # docker/containerd + luci apps make rootfs much larger than default; enlarge ext4 rootfs (MiB)
               make image PROFILE="generic" FILES="files" V=s ROOTFS_PARTSIZE=2048 PACKAGES="$PKGS"
             '
 
@@ -115,12 +111,10 @@ jobs:
         id: firmware
         run: |
           set -e
-          # ImageBuilder outputs to bin/targets/x86/64/
           cd bin/targets/x86/64
           echo "=== Files in output dir ==="
           ls -la
           echo "=== Looking for firmware ==="
-          # Find the squashfs combined image (immortalwrt uses different naming)
           FIRM=$(ls immortalwrt-*-x86-64-generic-squashfs-combined*.img.gz 2>/dev/null | head -1)
           if [ -z "$FIRM" ]; then
             FIRM=$(ls immortalwrt-*-x86-64-generic-ext4-combined*.img.gz 2>/dev/null | head -1)
@@ -131,7 +125,6 @@ jobs:
             exit 1
           fi
           echo "Firmware: $FIRM"
-          # Copy to GITHUB_WORKSPACE (writable) with new name
           cd ${{ github.workspace }}
           BIN_NAME="openwrt-x86-64-${LUCI_VERSION}.bin.gz"
           cp "bin/targets/x86/64/$FIRM" "$BIN_NAME"
